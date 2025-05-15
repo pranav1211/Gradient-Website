@@ -70,7 +70,7 @@ export default function Home() {
                 </h2>
               </div>
               <p className="text-2xl md:text-3xl text-white font-semibold">
-                9-10th May
+                Has Concluded
               </p>
               <Sparkles size={24} className="text-green-200 animate-pulse hidden md:block" />
             </div>
@@ -78,7 +78,7 @@ export default function Home() {
             {/* Right side (tagline on the left and Explore Now button on the right) */}
             <div className="flex flex-col md:flex-row items-center justify-center space-x-4 w-full md:w-auto text-center">
               <p className="text-green-100 text-lg md:text-xl font-medium">
-                Get ready for the biggest hits of the year!
+                Stay tuned for the recap!
               </p>
               <Link
                 href="/events"
