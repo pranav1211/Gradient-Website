@@ -167,6 +167,10 @@ export default function Events() {
               <div className="w-16 h-1 bg-purple-500" />
             </div>
 
+            <p className="text-6xl md:text-6xl font-extrabold righteous-regular mb-7 text-transparent bg-clip-text bg-gradient-to-r from-red-300 via-blue-200 to-green-200 text-center">
+              Stay tuned for our upcoming events! We are cooking something good!
+            </p>
+
             <div className="flex flex-col md:flex-row gap-6 py-4">
               {upcomingEvents.map((event, index) => (
                 <motion.div

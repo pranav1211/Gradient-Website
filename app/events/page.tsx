@@ -25,57 +25,24 @@ export default function EventsPage() {
       id: 1,
       title: "Jokes on You Again",
       description: "A thrilling comedy show by Bangalore's very own Niroop Mohan, Join us for an show of laughter and entertainment as Niroop takes the stage to share his unique perspective on life, love, and everything in between.",
-      date: "May 10th, 2025",
-      time: "10:00 AM",
-      location: "Auditorium 1, Ground Floor, PJA Block, BMSCE",
       category: "Utsav 2025",
-      status: "registration-open",
-      registrationFee: "₹150 per person",
-      prizePool: "N/A",
-      team: "Individual Participation",
-      coordinators: [
-        { name: "R Suman", number: "+91 6363742183" },
-        { name: "Likith Chowdary", number: "+91 9900773333" }
-      ],
-      registrationLink: "https://events.bmsutsav.in/events/GRDJOY",
+      status: "over",      
       poster: "https://gradient-content-server.vercel.app/content/utsav25/JOY.png"
     },
     {
       id: 2,
       title: "Uncharted 3 : Lost Voyage",
       description: "A thrilling high stakes online treasure hunt where participants embark on a quest to uncover hidden treasures and solve intricate puzzles. With a mix of technology and adventure, this event promises excitement and challenges.",
-      date: "May 9th, 2025",
-      time: "10:00 AM",
-      location: "MEL Lab 1 & 2, 7th Floor, PJA Block, BMSCE",
       category: "Utsav 2025",
-      status: "registration-open",
-      registrationFee: "₹100 per team",
-      prizePool: "₹5,000",
-      team: "2 in a team",
-      coordinators: [
-        { name: "Pranav Veeraghanta", number: "+91 8073194166" },
-        { name: "Siddarth Sahay", number: "+91 9354868006" }
-      ],
-      registrationLink: "https://events.bmsutsav.in/events/GRDULV",
+      status: "over",      
       poster: "https://gradient-content-server.vercel.app/content/utsav25/UNC.png"
     },
     {
       id: 3,
       title: "Sync or Sink",
       description: "A test of teamwork and strategy, where participants must work together to solve puzzles and challenges. You either Sync up with your teammates or Sink into the depths of despair.",
-      date: "May 10th, 2025",
-      time: "2:30 PM",
-      location: "CSE Seminar Hall, 4th Floor, PJA Block, BMSCE",
       category: "Utsav 2025",
-      status: "registration-open",
-      registrationFee: "₹100 per team",
-      prizePool: "₹4,000",
-      team: "2 in a team",
-      coordinators: [
-        { name: "Yashas Nandan", number: "+91 7676823822" },
-        { name: "Vignesh Madan", number: "+91 7022433357" }
-      ],
-      registrationLink: "https://events.bmsutsav.in/events/GRDSOS",
+      status: "over",  
       poster: "https://gradient-content-server.vercel.app/content/utsav25/SOS.png"
     }
   ];
@@ -252,12 +219,12 @@ export default function EventsPage() {
 
 
             <motion.p
-              className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto"
+              className="text-5xl md:text-5xl text-gray-300 max-w-4xl mx-auto righteous-regular"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.6 }}
             >
-              Get ready for an extraordinary showcase of talent, creativity, and innovation!
+              The events have concluded. Stay tuned for an exciting Recap
             </motion.p>
           </motion.div>
 
@@ -298,9 +265,9 @@ export default function EventsPage() {
                               Registration Open
                             </span>
                           )}
-                          {event.status === "coming-soon" && (
+                          {event.status === "over" && (
                             <span className="px-4 py-2 text-base font-medium bg-blue-600 text-white rounded-full border border-blue-400/30 shadow-md">
-                              Coming Soon
+                              Event Completed
                             </span>
                           )}
                         </div>
@@ -322,78 +289,6 @@ export default function EventsPage() {
                         {event.description}
                       </p>
 
-                      {/* Event details - Responsive grid layout */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
-                        <div className="flex items-center gap-3">
-                          <Calendar size={22} className="text-purple-400 flex-shrink-0" />
-                          <span className="text-purple-200 event-detail">{event.date}</span>
-                        </div>
-
-                        <div className="flex items-center gap-3">
-                          <Clock size={22} className="text-purple-400 flex-shrink-0" />
-                          <span className="text-purple-200 event-detail">{event.time}</span>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center gap-3 mb-6">
-                        <MapPin size={22} className="text-purple-400 flex-shrink-0" />
-                        <span className="text-purple-200 event-detail">{event.location}</span>
-                      </div>
-
-                      <div className="flex items-center gap-3 mb-6">
-                        <Users size={22} className="text-purple-400 flex-shrink-0" />
-                        <span className="text-purple-200 event-detail">{event.team}</span>
-                      </div>
-
-                      {/* Registration fee and prize pool */}
-                      <div className="grid grid-cols-1 gap-5 mb-6">
-                        <div className="flex items-center gap-4 bg-purple-800/50 p-4 rounded-lg border-l-3 border-purple-500">
-                          <DollarSign className="text-purple-300 flex-shrink-0" size={24} />
-                          <div>
-                            <h4 className="text-purple-300 text-base font-medium">Registration Fee</h4>
-                            <p className="text-white text-lg font-bold">{event.registrationFee}</p>
-                          </div>
-                        </div>
-
-                        <div className="flex items-center gap-4 bg-purple-800/50 p-4 rounded-lg border-l-3 border-yellow-500">
-                          <Trophy className="text-yellow-400 flex-shrink-0" size={24} />
-                          <div>
-                            <h4 className="text-yellow-300 text-base font-medium">Prize Pool</h4>
-                            <p className="text-white text-lg font-bold">{event.prizePool}</p>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Coordinators */}
-                      <div className="bg-purple-900/40 p-5 rounded-xl mb-8">
-                        <h4 className="text-lg font-bold text-white mb-4">Event Coordinators</h4>
-                        <div className="grid grid-cols-1 gap-4">
-                          {event.coordinators.map((coordinator, idx) => (
-                            <div key={idx} className="flex items-center gap-3">
-                              <Phone className="text-purple-400 flex-shrink-0" size={20} />
-                              <div>
-                                <p className="text-white text-lg">{coordinator.name}</p>
-                                <p className="text-purple-300 text-base">{coordinator.number}</p>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Registration button */}
-                      <div className="mt-auto">
-                        <motion.a
-                          href={event.registrationLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          className="inline-flex items-center justify-center gap-3 px-6 py-3.5 bg-purple-600 rounded-full hover:bg-purple-700 transition-colors duration-300 shadow-md font-medium text-lg w-full"
-                        >
-                          <span>Register Now</span>
-                          <ArrowRight size={22} />
-                        </motion.a>
-                      </div>
                     </div>
                   </div>
                 </motion.div>

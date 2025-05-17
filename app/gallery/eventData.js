@@ -1,57 +1,115 @@
 export const upcomingEvents = [
-    {
-        title: "Jokes on You Again",
-        description: "A thrilling comedy show by Bangalore's very own Niroop Mohan, Join us for an show of laughter and entertainment as Niroop takes the stage to share his unique perspective on life, love, and everything in between.",
-        date: "May 10th, 2025",
-        time: "10:00 AM",
-        location: "Auditorium 1, Ground Floor, PJA Block, BMSCE",
-        category: "Utsav 2025",
-        status: "registration-open",
-        registrationFee: "₹150 per person",
-        prizePool: "N/A",
-        coordinators: [
-            { name: "R Suman", number: "+91 6363742183" },
-            { name: "Likith Chowdary", number: "+91 9900773333" }
-        ],
-        registrationLink: "https://events.bmsutsav.in/events/GRDJOY",
-        poster: "https://gradient-content-server.vercel.app/content/utsav25/JOY.png"
-    },
-    {
-        title: "Uncharted 3 : Lost Voyage",
-        description: "A thrilling high stakes online treasure hunt where participants embark on a quest to uncover hidden treasures and solve intricate puzzles. With a mix of technology and adventure, this event promises excitement and challenges.",
-        date: "May 9th, 2025",
-        time: "10:00 AM",
-        location: "MEL Lab 1 & 2, 7th Floor, PJA Block, BMSCE",
-        category: "Utsav 2025",
-        status: "registration-open",
-        registrationFee: "₹100 per team",
-        prizePool: "₹5,000",
-        coordinators: [
-            { name: "Pranav Veeraghanta", number: "+91 8073194166" },
-            { name: "Siddarth Sahay", number: "+91 9354868006" }
-        ],
-        registrationLink: "https://events.bmsutsav.in/events/GRDULV",
-        poster: "https://gradient-content-server.vercel.app/content/utsav25/UNC.png"
-    },
-    {
-        title: "Sync or Sink",
-        description: "A test of teamwork and strategy, where participants must work together to solve puzzles and challenges. You either Sync up with your teammates or Sink into the depths of despair.",
-        date: "May 10th, 2025",
-        time: "2:30 PM",
-        location: "CSE Seminar Hall, 4th Floor, PJA Block, BMSCE",
-        category: "Utsav 2025",
-        status: "registration-open",
-        registrationFee: "₹100 per team",
-        prizePool: "₹4,000",
-        coordinators: [
-            { name: "Yashas Nandan", number: "+91 7676823822" },
-            { name: "Vignesh Madan", number: "+91 7022433357" }
-        ],
-        registrationLink: "https://events.bmsutsav.in/events/GRDSOS",
-        poster: "https://gradient-content-server.vercel.app/content/utsav25/SOS.png"
-    }
+    // {
+    //     title: "Jokes on You Again",
+    //     description: "A thrilling comedy show by Bangalore's very own Niroop Mohan, Join us for an show of laughter and entertainment as Niroop takes the stage to share his unique perspective on life, love, and everything in between.",
+    //     date: "May 10th, 2025",
+    //     time: "10:00 AM",
+    //     location: "Auditorium 1, Ground Floor, PJA Block, BMSCE",
+    //     category: "Utsav 2025",
+    //     status: "registration-open",
+    //     registrationFee: "₹150 per person",
+    //     prizePool: "N/A",
+    //     coordinators: [
+    //         { name: "R Suman", number: "+91 6363742183" },
+    //         { name: "Likith Chowdary", number: "+91 9900773333" }
+    //     ],
+    //     registrationLink: "https://events.bmsutsav.in/events/GRDJOY",
+    //     poster: "https://gradient-content-server.vercel.app/content/utsav25/JOY.png"
+    // },
+    // {
+    //     title: "Uncharted 3 : Lost Voyage",
+    //     description: "A thrilling high stakes online treasure hunt where participants embark on a quest to uncover hidden treasures and solve intricate puzzles. With a mix of technology and adventure, this event promises excitement and challenges.",
+    //     date: "May 9th, 2025",
+    //     time: "10:00 AM",
+    //     location: "MEL Lab 1 & 2, 7th Floor, PJA Block, BMSCE",
+    //     category: "Utsav 2025",
+    //     status: "registration-open",
+    //     registrationFee: "₹100 per team",
+    //     prizePool: "₹5,000",
+    //     coordinators: [
+    //         { name: "Pranav Veeraghanta", number: "+91 8073194166" },
+    //         { name: "Siddarth Sahay", number: "+91 9354868006" }
+    //     ],
+    //     registrationLink: "https://events.bmsutsav.in/events/GRDULV",
+    //     poster: "https://gradient-content-server.vercel.app/content/utsav25/UNC.png"
+    // },
+    // {
+    //     title: "Sync or Sink",
+    //     description: "A test of teamwork and strategy, where participants must work together to solve puzzles and challenges. You either Sync up with your teammates or Sink into the depths of despair.",
+    //     date: "May 10th, 2025",
+    //     time: "2:30 PM",
+    //     location: "CSE Seminar Hall, 4th Floor, PJA Block, BMSCE",
+    //     category: "Utsav 2025",
+    //     status: "registration-open",
+    //     registrationFee: "₹100 per team",
+    //     prizePool: "₹4,000",
+    //     coordinators: [
+    //         { name: "Yashas Nandan", number: "+91 7676823822" },
+    //         { name: "Vignesh Madan", number: "+91 7022433357" }
+    //     ],
+    //     registrationLink: "https://events.bmsutsav.in/events/GRDSOS",
+    //     poster: "https://gradient-content-server.vercel.app/content/utsav25/SOS.png"
+    // }
 ];
 export const eventCategories = [
+    {
+        name: "Utsav",
+        description: "The annual cultural festival of BMSCE where Gradient has celebrated art, music, and creative expression.",
+        years: [
+            {
+                year: "2025",
+                events: [
+                    {
+                        title: "Jokes on You Again",
+                        participants: 340,
+                        description: "A thrilling comedy show by Bangalore's very own Niroop Mohan, Join us for an show of laughter and entertainment as Niroop takes the stage to share his unique perspective on life, love, and everything in between.",
+                        status: "registration-open",
+                        poster: "https://gradient-content-server.vercel.app/content/utsav25/JOY.png"
+                    },
+                    {
+                        title: "Uncharted 3 : Lost Voyage",
+                        participants: 80,
+                        description: "A thrilling high stakes online treasure hunt where participants embark on a quest to uncover hidden treasures and solve intricate puzzles. With a mix of technology and adventure, this event promises excitement and challenges.",
+                        status: "registration-open",
+                        poster: "https://gradient-content-server.vercel.app/content/utsav25/UNC.png"
+                    },
+                    {
+                        title: "Sync or Sink",
+                        participants: 60,
+                        description: "A test of teamwork and strategy, where participants must work together to solve puzzles and challenges. You either Sync up with your teammates or Sink into the depths of despair.",
+                        status: "registration-open",
+                        poster: "https://gradient-content-server.vercel.app/content/utsav25/SOS.png"
+                    }
+                ]
+            },
+            {
+                year: "2024",
+                events: [
+                    {
+                        title: "Jokes on You Too Standup Comedy Event",
+                        participants: 280,
+                        description: "A lively stand-up comedy show by Nithin Kamath, blending observational humor and satire to engage and entertain the audience.",
+                        status: "completed",
+                        poster: "https://gradient-content-server.vercel.app/content/posters/jok2.webp"
+                    },
+                    {
+                        title: "Uncharted 2.0",
+                        participants: 43,
+                        description: "An adventurous treasure hunt where participants deciphered intricate codes and solved puzzles to unlock the treasure, blending technology with excitement.",
+                        status: "completed",
+                        poster: "https://gradient-content-server.vercel.app/content/posters/unc2.webp"
+                    },
+                    {
+                        title: "Time Rift",
+                        participants: 40,
+                        description: "An event featuring time-themed puzzles, decoding ancient ciphers, and trivia with unique twists, combining education and competition.",
+                        status: "completed",
+                        poster: "https://gradient-content-server.vercel.app/content/posters/tmr.webp"
+                    }
+                ]
+            }
+        ]
+    },
     {
         name: "Gradient Week",
         description: "Our flagship annual Tech Innovation Week that fosters collaboration and innovation among tech enthusiasts.",
@@ -225,39 +283,7 @@ export const eventCategories = [
                 ]
             }
         ]
-    },
-    {
-        name: "Utsav",
-        description: "The annual cultural festival of BMSCE where Gradient has celebrated art, music, and creative expression.",
-        years: [
-            {
-                year: "2024",
-                events: [
-                    {
-                        title: "Jokes on You Too Standup Comedy Event",
-                        participants: 280,
-                        description: "A lively stand-up comedy show by Nithin Kamath, blending observational humor and satire to engage and entertain the audience.",
-                        status: "completed",
-                        poster: "https://gradient-content-server.vercel.app/content/posters/jok2.webp"
-                    },
-                    {
-                        title: "Uncharted 2.0",
-                        participants: 43,
-                        description: "An adventurous treasure hunt where participants deciphered intricate codes and solved puzzles to unlock the treasure, blending technology with excitement.",
-                        status: "completed",
-                        poster: "https://gradient-content-server.vercel.app/content/posters/unc2.webp"
-                    },
-                    {
-                        title: "Time Rift",
-                        participants: 40,
-                        description: "An event featuring time-themed puzzles, decoding ancient ciphers, and trivia with unique twists, combining education and competition.",
-                        status: "completed",
-                        poster: "https://gradient-content-server.vercel.app/content/posters/tmr.webp"
-                    }
-                ]
-            }
-        ]
-    },
+    },    
     {
         name: "Standalone",
         description: "Special events and one-off initiatives throughout the academic year to enrich the mind and fulfill the soul.",
