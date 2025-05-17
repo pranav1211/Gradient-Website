@@ -63,21 +63,21 @@ export const eventCategories = [
                         title: "Jokes on You Again",
                         participants: 340,
                         description: "A thrilling comedy show by Bangalore's very own Niroop Mohan, Join us for an show of laughter and entertainment as Niroop takes the stage to share his unique perspective on life, love, and everything in between.",
-                        status: "registration-open",
+                        status: "completed",
                         poster: "https://gradient-content-server.vercel.app/content/utsav25/JOY.png"
                     },
                     {
                         title: "Uncharted 3 : Lost Voyage",
                         participants: 80,
                         description: "A thrilling high stakes online treasure hunt where participants embark on a quest to uncover hidden treasures and solve intricate puzzles. With a mix of technology and adventure, this event promises excitement and challenges.",
-                        status: "registration-open",
+                        status: "completed",
                         poster: "https://gradient-content-server.vercel.app/content/utsav25/UNC.png"
                     },
                     {
                         title: "Sync or Sink",
                         participants: 60,
                         description: "A test of teamwork and strategy, where participants must work together to solve puzzles and challenges. You either Sync up with your teammates or Sink into the depths of despair.",
-                        status: "registration-open",
+                        status: "completed",                        
                         poster: "https://gradient-content-server.vercel.app/content/utsav25/SOS.png"
                     }
                 ]
