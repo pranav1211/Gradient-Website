@@ -156,12 +156,12 @@ export default function About() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-purple-100 mb-12">
                   <div className="group transform hover:scale-105 transition-transform duration-300">
                     <Award className="text-purple-400 mx-auto mb-3 group-hover:text-purple-300 transition-colors" size={40} />
-                    <h3 className="text-2xl md:text-3xl font-bold group-hover:text-white transition-colors">45+</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold group-hover:text-white transition-colors">48+</h3>
                     <p className="text-lg">Events Conducted</p>
                   </div>
                   <div className="group transform hover:scale-105 transition-transform duration-300">
                     <Users className="text-purple-400 mx-auto mb-3 group-hover:text-purple-300 transition-colors" size={40} />
-                    <h3 className="text-2xl md:text-3xl font-bold group-hover:text-white transition-colors">2500+</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold group-hover:text-white transition-colors">3000+</h3>
                     <p className="text-lg">Participants</p>
                   </div>
                   <div className="group transform hover:scale-105 transition-transform duration-300">
@@ -171,7 +171,7 @@ export default function About() {
                   </div>
                   <div className="group transform hover:scale-105 transition-transform duration-300">
                     <Award className="text-purple-400 mx-auto mb-3 group-hover:text-purple-300 transition-colors" size={40} />
-                    <h3 className="text-2xl md:text-3xl font-bold group-hover:text-white transition-colors">₹4L+</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold group-hover:text-white transition-colors">₹5L+</h3>
                     <p className="text-lg">Sponsorship Raised</p>
                   </div>
                 </div>

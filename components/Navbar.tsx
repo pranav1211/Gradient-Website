@@ -82,7 +82,7 @@ export default function Navbar() {
               {navItems.map((item, index) => (
                 <React.Fragment key={item.name}>
                   {index > 0 && (
-                    <div className="h-6 w-px bg-gradient-to-b from-purple-400/10 via-white/30 to-purple-400/10 mx-5"></div>
+                    <div className="h-6 w-px bg-gradient-to-b from-purple-400/10 via-white/30 to-purple-400/10 mx-2"></div>
                   )}
                   <motion.li
                     whileHover={{ scale: 1.05 }}
@@ -145,7 +145,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu - this is what was missing */}
+      {/* Mobile menu*/}
       <AnimatePresence>
         {isOpen && (
           <motion.div

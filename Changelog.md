@@ -85,7 +85,10 @@
 - new design for lets connect page
 - fixed heading fonts across all pages
 
-## 17/05/25
+## 17/05/25 (Pranav)
 - Removed details of Utsav page and made it to a recap coming soon page
 - migrated upcoming event gallery upcoming events to past events and put a placeholder for upcoming events
 - changed the banner on the home page to indicate the events have concluded
+
+## 18/05/25 (Pranav)
+- Adjusted navbar links spacing for 1440 px screens
