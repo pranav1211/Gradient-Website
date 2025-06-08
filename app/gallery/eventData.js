@@ -106,7 +106,7 @@ export const eventCategories = [
                         poster: "https://gradient-content-server.vercel.app/content/utsav25/gallery/team1.jpg",
                         images: [
                             "https://gradient-content-server.vercel.app/content/utsav25/gallery/team1.jpg",
-                            "https://gradient-content-server.vercel.app/content/utsav25/gallery/team2.jpg",
+                            "https://gradient-content-server.vercel.app/content/utsav25/gallery/team2.JPG",
                             "https://gradient-content-server.vercel.app/content/utsav25/gallery/team3.jpg",
                             "https://gradient-content-server.vercel.app/content/utsav25/gallery/e1.jpg",
                             "https://gradient-content-server.vercel.app/content/utsav25/gallery/e2.jpg"
