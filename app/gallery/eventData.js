@@ -64,21 +64,53 @@ export const eventCategories = [
                         participants: 340,
                         description: "A thrilling comedy show by Bangalore's very own Niroop Mohan, Join us for an show of laughter and entertainment as Niroop takes the stage to share his unique perspective on life, love, and everything in between.",
                         status: "completed",
-                        poster: "https://gradient-content-server.vercel.app/content/utsav25/JOY.png"
+                        poster: "https://gradient-content-server.vercel.app/content/utsav25/JOY.png",
+                        images: [
+                            "https://gradient-content-server.vercel.app/content/utsav25/gallery/joy/joyfs.png",
+                            "https://gradient-content-server.vercel.app/content/utsav25/gallery/joy/1.JPG",
+                            "https://gradient-content-server.vercel.app/content/utsav25/gallery/joy/2.JPG",
+                            "https://gradient-content-server.vercel.app/content/utsav25/gallery/joy/3.JPG",
+                            "https://gradient-content-server.vercel.app/content/utsav25/gallery/joy/4.JPG",
+                        ]
                     },
                     {
                         title: "Uncharted 3 : Lost Voyage",
                         participants: 80,
                         description: "A thrilling high stakes online treasure hunt where participants embark on a quest to uncover hidden treasures and solve intricate puzzles. With a mix of technology and adventure, this event promises excitement and challenges.",
                         status: "completed",
-                        poster: "https://gradient-content-server.vercel.app/content/utsav25/UNC.png"
+                        poster: "https://gradient-content-server.vercel.app/content/utsav25/UNC.png",
+                        images: [
+                            "https://gradient-content-server.vercel.app/content/utsav25/gallery/unc/ulvfs.png",
+                            "https://gradient-content-server.vercel.app/content/utsav25/gallery/unc/1.JPG",
+                            "https://gradient-content-server.vercel.app/content/utsav25/gallery/unc/2.jpeg",
+                            "https://gradient-content-server.vercel.app/content/utsav25/gallery/unc/3.jpg",
+                            "https://gradient-content-server.vercel.app/content/utsav25/gallery/unc/4.jpg",
+                        ]
                     },
                     {
                         title: "Sync or Sink",
                         participants: 60,
                         description: "A test of teamwork and strategy, where participants must work together to solve puzzles and challenges. You either Sync up with your teammates or Sink into the depths of despair.",
-                        status: "completed",                        
-                        poster: "https://gradient-content-server.vercel.app/content/utsav25/SOS.png"
+                        status: "completed",
+                        poster: "https://gradient-content-server.vercel.app/content/utsav25/SOS.png",
+                        images: [
+                            "https://gradient-content-server.vercel.app/content/utsav25/gallery/sos/sosfs.png",
+                            "https://gradient-content-server.vercel.app/content/utsav25/gallery/sos/1.jpg",
+                        ]
+                    },
+                    {
+                        title: "The Gradient Team",
+                        participants: 10,
+                        description: "The minds behind the events, working tirelessly to bring innovation and creativity to life.",
+                        status: "completed",
+                        poster: "https://gradient-content-server.vercel.app/content/utsav25/gallery/team1.jpg",
+                        images: [
+                            "https://gradient-content-server.vercel.app/content/utsav25/gallery/team1.jpg",
+                            "https://gradient-content-server.vercel.app/content/utsav25/gallery/team2.jpg",
+                            "https://gradient-content-server.vercel.app/content/utsav25/gallery/team3.jpg",
+                            "https://gradient-content-server.vercel.app/content/utsav25/gallery/e1.jpg",
+                            "https://gradient-content-server.vercel.app/content/utsav25/gallery/e2.jpg"
+                        ]
                     }
                 ]
             },
@@ -90,7 +122,7 @@ export const eventCategories = [
                         participants: 280,
                         description: "A lively stand-up comedy show by Nithin Kamath, blending observational humor and satire to engage and entertain the audience.",
                         status: "completed",
-                        poster: "https://gradient-content-server.vercel.app/content/posters/jok2.webp"
+                        poster: "https://gradient-content-server.vercel.app/content/posters/jok2.webp",
                     },
                     {
                         title: "Uncharted 2.0",
@@ -151,7 +183,7 @@ export const eventCategories = [
                             "https://gradient-content-server.vercel.app/content/gallery/recap/aiagent/2.webp",
                             "https://gradient-content-server.vercel.app/content/gallery/recap/aiagent/3.webp",
                         ]
-                    }, 
+                    },
                     {
                         title: "Inauguration Ceremony",
                         participants: 120,
@@ -166,7 +198,7 @@ export const eventCategories = [
                             "https://gradient-content-server.vercel.app/content/gallery/recap/inaug/4.webp",
                             "https://gradient-content-server.vercel.app/content/gallery/recap/inaug/5.webp",
                         ]
-                    },{
+                    }, {
                         title: "Cultural Evening",
                         participants: 250,
                         description: "The Official closing ceremony of Gradient Week 2025, featuring a cultural evening with performances from various cultural clubs of BMSCE and prize distribution.",
@@ -283,7 +315,7 @@ export const eventCategories = [
                 ]
             }
         ]
-    },    
+    },
     {
         name: "Standalone",
         description: "Special events and one-off initiatives throughout the academic year to enrich the mind and fulfill the soul.",

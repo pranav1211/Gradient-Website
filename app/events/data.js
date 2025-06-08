@@ -82,7 +82,7 @@ export const gradientTeam = [
         role: "Event Coordinators : Sync or Sink",
     },
     {
-        name: "Supriya C S",
+        name: "Supriya Gowda",
         role: "Sponsorship POC",
     },
     {
