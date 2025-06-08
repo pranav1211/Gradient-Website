@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Camera,
@@ -19,36 +19,150 @@ import {
 import { eventsData, gradientTeam, galleryData } from './data.js';
 import Navbar from "../../components/Navbar";
 
+// Lazy Image Component with loading optimization
+const LazyImage = ({ src, alt, className, onLoad, style, ...props }) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
+  const imgRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && imgRef.current && !imageLoaded && !imageError) {
+          const img = new Image();
+          img.onload = () => {
+            setImageLoaded(true);
+            if (onLoad) onLoad();
+          };
+          img.onerror = () => setImageError(true);
+          img.src = src;
+        }
+      },
+      { threshold: 0.1, rootMargin: '50px' }
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [src, imageLoaded, imageError, onLoad]);
+
+  return (
+    <div ref={imgRef} className={`${className} relative overflow-hidden`} style={style} {...props}>
+      {!imageLoaded && !imageError && (
+        <div className="absolute inset-0 bg-gray-800 animate-pulse flex items-center justify-center">
+          <ImageIcon className="text-gray-600" size={32} />
+        </div>
+      )}
+      {imageLoaded && (
+        <img
+          src={src}
+          alt={alt}
+          className="w-full h-full object-cover transition-opacity duration-300"
+          style={{ opacity: imageLoaded ? 1 : 0 }}
+        />
+      )}
+      {imageError && (
+        <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
+          <span className="text-gray-400 text-sm">Failed to load</span>
+        </div>
+      )}
+    </div>
+  );
+};
+
+// Lazy Background Component
+const LazyBackground = ({ src, children, className, filter = 'brightness(0.5) blur(1px)' }) => {
+  const [bgLoaded, setBgLoaded] = useState(false);
+  const bgRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !bgLoaded) {
+          const img = new Image();
+          img.onload = () => setBgLoaded(true);
+          img.src = src;
+        }
+      },
+      { threshold: 0.1, rootMargin: '100px' }
+    );
+
+    if (bgRef.current) {
+      observer.observe(bgRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [src, bgLoaded]);
+
+  return (
+    <div ref={bgRef} className={className}>
+      {!bgLoaded && (
+        <div className="absolute inset-0 bg-gray-900 animate-pulse" />
+      )}
+      {bgLoaded && (
+        <div
+          className="absolute inset-0 w-full h-full transition-opacity duration-500"
+          style={{
+            backgroundImage: `url(${src})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+            backgroundRepeat: 'no-repeat',
+            filter: filter,
+            opacity: bgLoaded ? 1 : 0
+          }}
+        />
+      )}
+      {children}
+    </div>
+  );
+};
+
 export default function EventsRecapPage() {
   const [showGallery, setShowGallery] = useState(false);
   const [currentEvent, setCurrentEvent] = useState(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [showMainGallery, setShowMainGallery] = useState(false);
+  const [visibleImages, setVisibleImages] = useState(12); // Start with fewer images
 
   const containerRef = useRef(null);
 
-  // Font import
+  // Font import with preload
   useEffect(() => {
     const link = document.createElement('link');
     link.href = 'https://fonts.googleapis.com/css2?family=Righteous&display=swap';
     link.rel = 'stylesheet';
+    link.rel = 'preload';
+    link.as = 'style';
     document.head.appendChild(link);
   }, []);
 
-  // Track scroll position for scroll-to-top button only
+  // Optimized scroll handler with throttling
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > window.innerHeight);
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setShowScrollTop(window.scrollY > window.innerHeight);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const openGallery = (event) => {
+  const openGallery = useCallback((event) => {
     setCurrentEvent(event);
     setShowGallery(true);
-  };
+  }, []);
+
+  const loadMoreImages = useCallback(() => {
+    setVisibleImages(prev => Math.min(prev + 12, galleryData.images.length));
+  }, []);
 
   const colorVariants = {
     purple: {
@@ -70,11 +184,15 @@ export default function EventsRecapPage() {
 
   return (
     <div ref={containerRef} className="bg-black text-white overflow-x-hidden">
-      <style jsx>{`
+        {/* Google Fonts Import */}
+        <style jsx global>{`
+        @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Bree+Serif&display=swap');
+
         .righteous-regular {
-          font-family: "Righteous", sans-serif;
+          font-family: 'Righteous', sans-serif;
           font-weight: 400;
           font-style: normal;
+        }
         }
       `}</style>
 
@@ -96,7 +214,7 @@ export default function EventsRecapPage() {
       </AnimatePresence>
 
       {/* Hero Section */}
-      <section className="h-screen flex items-center justify-center relative overflow-hidden">
+      <section className="h-200 flex items-center justify-center relative overflow-hidden">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video
@@ -104,6 +222,7 @@ export default function EventsRecapPage() {
             loop
             muted
             playsInline
+            preload="metadata"
             className="absolute w-full h-full object-cover"
             style={{ filter: "brightness(0.4)" }}
           >
@@ -126,9 +245,9 @@ export default function EventsRecapPage() {
           }}
         />
 
-        {/* Floating particles */}
+        {/* Optimized floating particles - reduced count */}
         <div className="absolute inset-0 z-30">
-          {[...Array(30)].map((_, i) => (
+          {[...Array(15)].map((_, i) => (
             <motion.div
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full"
@@ -155,45 +274,38 @@ export default function EventsRecapPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-          <motion.h1
-            className="text-7xl md:text-9xl font-bold righteous-regular mb-7 text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-yellow-200 to-pink-200"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-          >
-            <span className="block md:inline">Gradient</span>
-            <span className="block md:inline"> X</span>
-            <span className="block md:inline"> Utsav</span>
-            <span className="block md:inline"> Ananta</span>
-          </motion.h1>
+            <motion.h1
+              className="text-7xl md:text-9xl font-bold righteous-regular mb-7 text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-yellow-200 to-pink-200"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
+            >
+              <span className="block md:inline">Gradient</span>
+              <span className="block md:inline"> X</span>
+              <span className="block md:inline"> Utsav</span>
+              <span className="block md:inline"> Ananta</span>
+            </motion.h1>
             <h2 className="righteous-regular text-4xl md:text-6xl font-semibold mb-8 text-white/90">
             </h2>
             <p className="text-2xl md:text-5xl text-white max-w-4xl mx-auto">
               Relive the magic, memories, and moments that made our collaboration unforgettable
-            </p>
+            </p>            
           </motion.div>
+          
         </div>
       </section>
 
-      {/* Event Sections */}
+      {/* Event Sections with Lazy Loading */}
       {eventsData.map((event, index) => (
         <section
           key={event.id}
           className="h-screen relative overflow-hidden flex items-center justify-center"
         >
-          {/* Background Image */}
-          <div className="absolute inset-0">
-            <div
-              className="w-full h-full"
-              style={{
-                backgroundImage: `url(${event.backgroundImage})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center center',
-                backgroundRepeat: 'no-repeat',
-                filter: 'brightness(0.5) blur(1px)'
-              }}
-            />
-          </div>
+          {/* Lazy Background Image */}
+          <LazyBackground
+            src={event.backgroundImage}
+            className="absolute inset-0"
+          />
 
           {/* Gradient Overlay */}
           <div className={`absolute inset-0 bg-gradient-to-br ${colorVariants[event.color].gradient}`} />
@@ -262,86 +374,90 @@ export default function EventsRecapPage() {
         </section>
       ))}
 
-      {/* Thank You & Team Section */}
+      {/* Fixed Thank You & Team Section */}
       <section className="min-h-screen bg-gradient-to-br from-purple-900 via-black to-cyan-900 relative overflow-hidden">
-        {/* Video Section */}
-        <div className="h-screen flex items-center justify-center relative overflow-hidden">
-          {/* Background Video */}
-          <div className="absolute inset-0 z-0">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute w-full h-full object-cover"
-              style={{ filter: "brightness(0.4)" }}
-            >
-              <source
-                src="https://gradient-content-server.vercel.app/content/utsav25/bg.mp4"
-                type="video/mp4"
-              />
-            </video>
-          </div>
+        {/* Video Background Container */}
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            className="absolute w-full h-full object-cover"
+            style={{ filter: "brightness(0.4)" }}
+          >
+            <source
+              src="https://gradient-content-server.vercel.app/content/utsav25/bg.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
 
-          {/* Dark gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/40 z-10" />
+        {/* Dark gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/40 z-10" />
 
-          {/* Main Content Container */}
-          <div className="text-center z-20 px-4 max-w-6xl mx-auto">
-            {/* Thank You Header */}
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <Heart size={32} className="text-red-400" fill="currentColor" />
-                <h2 className="righteous-regular text-6xl md:text-8xl font-bold bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-                  Thank You
-                </h2>
-                <Heart size={32} className="text-red-400" fill="currentColor" />
-              </div>
-
-              <p className="text-2xl md:text-3xl text-white mb-12">
-                To the incredible team who made this possible
-              </p>
-            </motion.div>
-
-            {/* Team Grid */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.3 }}
-              className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 mb-16"
-            >
-              {gradientTeam.map((member, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white hover:bg-white/20 transition-all duration-300"
-                >
-                  <div className="font-semibold text-lg">{member.name}</div>
-                  <div className="text-white/70 text-sm">{member.role}</div>
-                </motion.div>
-              ))}
-            </motion.div>
-            <div className="text-center z-20 px-4 max-w-6xl mx-auto">
+        {/* Main Content Container */}
+        <div className="relative z-20 min-h-screen flex flex-col">
+          {/* Thank You Section */}
+          <div className="flex-1 flex items-center justify-center py-20">
+            <div className="text-center px-4 max-w-6xl mx-auto">
+              {/* Thank You Header */}
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
-               >
-                {/* Gallery Button */}
+                className="mb-16"
+              >
+                <div className="flex items-center justify-center gap-3 mb-6">
+                  <Heart size={32} className="text-red-400" fill="currentColor" />
+                  <h2 className="righteous-regular text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+                    Thank You
+                  </h2>
+                  <Heart size={32} className="text-red-400" fill="currentColor" />
+                </div>
+
+                <p className="text-xl md:text-2xl lg:text-3xl text-white mb-12">
+                  To the incredible team who made this possible
+                </p>
+              </motion.div>
+
+              {/* Team Grid */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.3 }}
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 mb-16 max-w-5xl mx-auto"
+              >
+                {gradientTeam.map((member, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.05 }}
+                    className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white hover:bg-white/20 transition-all duration-300"
+                  >
+                    <div className="font-semibold text-xl">{member.name}</div>
+                    <div className="text-white/70 text-l">{member.role}</div>
+                  </motion.div>
+                ))}
+              </motion.div>
+
+              {/* Gallery Button */}
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="mb-20"
+              >
                 <motion.button
                   onClick={() => setShowMainGallery(true)}
                   className="group bg-gradient-to-r from-cyan-400/20 to-purple-400/20 border border-cyan-400/30 px-12 py-6 rounded-full text-white text-xl font-semibold hover:bg-cyan-400/30 transition-all duration-300 shadow-cyan-500/20"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  >
+                >
                   <div className="flex items-center gap-4">
                     <Camera size={28} />
                     <span>View Gallery</span>
@@ -349,29 +465,28 @@ export default function EventsRecapPage() {
                   </div>
                 </motion.button>
               </motion.div>
-            </div>
 
-            <div className="text-center z-20 px-4 max-w-6xl mx-auto">
+              {/* Final Message */}
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.2 }}
+                transition={{ duration: 1, delay: 0.7 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <h2 className="righteous-regular text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <h2 className="righteous-regular text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Until We Meet Again
                 </h2>
-                <p className="text-2xl md:text-3xl text-white max-w-3xl mx-auto">
+                <p className="text-xl md:text-2xl lg:text-3xl text-white max-w-4xl mx-auto leading-relaxed">
                   Here's to the memories we've created and memories yet to come. Thank you for being a part of this journey with us.
                 </p>
               </motion.div>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* Event Gallery Modal */}
+      {/* Event Gallery Modal with Lazy Loading */}
       <AnimatePresence>
         {showGallery && currentEvent && (
           <motion.div
@@ -398,19 +513,19 @@ export default function EventsRecapPage() {
                 </button>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6">
                 {currentEvent.galleryImages.map((image, index) => (
                   <motion.div
                     key={index}
-                    className="relative group overflow-hidden rounded-xl"
+                    className="relative group overflow-hidden rounded-xl w-full h-full"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                   >
-                    <img
+                    <LazyImage
                       src={image}
                       alt={`${currentEvent.title} ${index + 1}`}
-                      className="w-full h-50 object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                   </motion.div>
@@ -421,7 +536,7 @@ export default function EventsRecapPage() {
         )}
       </AnimatePresence>
 
-      {/* Main Gallery Modal */}
+      {/* Main Gallery Modal with Progressive Loading */}
       <AnimatePresence>
         {showMainGallery && (
           <motion.div
@@ -439,7 +554,7 @@ export default function EventsRecapPage() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between mb-6">
-                <h3 className="righteous-regular text-3xl font-bold text-white">Complete Gallery</h3>
+                <h3 className="righteous-regular text-3xl font-bold text-white">Gallery</h3>
                 <button
                   onClick={() => setShowMainGallery(false)}
                   className="text-white/70 hover:text-white text-2xl font-bold w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors"
@@ -448,19 +563,19 @@ export default function EventsRecapPage() {
                 </button>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                {galleryData.images.map((image, index) => (
+              <div className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 gap-6">
+                {galleryData.images.slice(0, visibleImages).map((image, index) => (
                   <motion.div
                     key={index}
-                    className="relative group overflow-hidden rounded-xl"
+                    className="relative group overflow-hidden rounded-xl w-full h-full"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
                   >
-                    <img
+                    <LazyImage
                       src={image.url}
                       alt={image.caption || `Gallery image ${index + 1}`}
-                      className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                     {image.caption && (
@@ -471,6 +586,20 @@ export default function EventsRecapPage() {
                   </motion.div>
                 ))}
               </div>
+
+              {/* Load More Button */}
+              {visibleImages < galleryData.images.length && (
+                <div className="text-center mt-8">
+                  <motion.button
+                    onClick={loadMoreImages}
+                    className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-3 rounded-full text-white font-semibold hover:shadow-lg transition-all duration-300"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Load More Images ({galleryData.images.length - visibleImages} remaining)
+                  </motion.button>
+                </div>
+              )}
             </motion.div>
           </motion.div>
         )}

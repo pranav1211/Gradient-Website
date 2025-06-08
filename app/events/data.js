@@ -10,18 +10,19 @@ export const eventsData = [
             "https://gradient-content-server.vercel.app/content/utsav25/gallery/joy/1.JPG",
             "https://gradient-content-server.vercel.app/content/utsav25/gallery/joy/2.JPG",
             "https://gradient-content-server.vercel.app/content/utsav25/gallery/joy/3.JPG",
+            "https://gradient-content-server.vercel.app/content/utsav25/gallery/joy/4.JPG",
 
         ],
         color: "purple",
         volunteers: [
-            "Akshay",
-            "Sandeep",
-            "Sanjana S",
-            "Akash",
-            "Ashish",
-            "Sachi",
-            "Sneha",
-            "Nithesh"
+            "Akshay Bharadwaj",
+            "Sandeep N",
+            "S Sanjana",
+            "Akash Bharadwaj",
+            "A Ashish",
+            "Saachi Kulkarni",
+            "Sneha P",
+            "Nithesh B"
         ]
     },
     {
@@ -31,9 +32,11 @@ export const eventsData = [
         thumbnail: "https://gradient-content-server.vercel.app/content/utsav25/gallery/unc/2.jpeg",
         backgroundImage: "https://gradient-content-server.vercel.app/content/utsav25/gallery/unc/2.jpeg",
         galleryImages: [
+            "https://gradient-content-server.vercel.app/content/utsav25/gallery/unc/ulvfs.png",
             "https://gradient-content-server.vercel.app/content/utsav25/gallery/unc/1.JPG",
-            "https://gradient-content-server.vercel.app/content/utsav25/gallery/unc/2.JPG",
-            "https://gradient-content-server.vercel.app/content/utsav25/gallery/unc/3.JPG",
+            "https://gradient-content-server.vercel.app/content/utsav25/gallery/unc/2.jpeg",
+            "https://gradient-content-server.vercel.app/content/utsav25/gallery/unc/3.jpg",
+            "https://gradient-content-server.vercel.app/content/utsav25/gallery/unc/4.jpg",
         ],
         color: "cyan",
         volunteers: [
@@ -48,9 +51,8 @@ export const eventsData = [
         thumbnail: "https://gradient-content-server.vercel.app/content/utsav25/gallery/sos/sosfs.png",
         backgroundImage: "https://gradient-content-server.vercel.app/content/utsav25/gallery/sos/sosfs.png",
         galleryImages: [
-            "https://gradient-content-server.vercel.app/content/utsav25/gallery/sos/1.JPG",
-            "https://gradient-content-server.vercel.app/content/utsav25/gallery/sos/2.JPG",
-            "https://gradient-content-server.vercel.app/content/utsav25/gallery/sos/3.JPG",
+            "https://gradient-content-server.vercel.app/content/utsav25/gallery/sos/sosfs.png",
+            "https://gradient-content-server.vercel.app/content/utsav25/gallery/sos/1.jpg",            
         ],
         color: "orange",
         volunteers: [
@@ -93,8 +95,32 @@ export const gradientTeam = [
 export const galleryData = {
     images: [
         {
-            url: "https://gradient-content-server.vercel.app/content/utsav25/gallery/image1.jpg",
-            caption: "Opening ceremony highlights"
-        }
+            url: "https://gradient-content-server.vercel.app/content/utsav25/gallery/utsav.jpg",
+            caption: "Utsav"
+        },
+        {
+            url: "https://gradient-content-server.vercel.app/content/utsav25/gallery/ananta.jpg",
+            caption: "Ananta"
+        },
+        {
+            url: "https://gradient-content-server.vercel.app/content/utsav25/gallery/team1.jpg",
+            caption: "Gradient Team"
+        },
+        {
+            url: "https://gradient-content-server.vercel.app/content/utsav25/gallery/team2.JPG",
+            caption: "Gradient Team"
+        },
+        {
+            url: "https://gradient-content-server.vercel.app/content/utsav25/gallery/team3.jpg",
+            caption: "Gradient Team with Niroop Mohan"
+        },
+        {
+            url: "https://gradient-content-server.vercel.app/content/utsav25/gallery/e1.jpg",
+            caption: "Marketing at it's finest"
+        },
+        {
+            url: "https://gradient-content-server.vercel.app/content/utsav25/gallery/e2.jpg",
+            caption: "Marketing at it's finest"
+        },
     ]
 };

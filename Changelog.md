@@ -92,3 +92,10 @@
 
 ## 18/05/25 (Pranav)
 - Adjusted navbar links spacing for 1440 px screens
+
+## 09/06/2025
+- removed utsav special spage
+- added utsav recap page
+- added a scrolltop component to each page
+- removed stuff from team
+- updated banner on home page

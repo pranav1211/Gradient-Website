@@ -172,7 +172,7 @@ const Footer = () => {
           <p className="mt-2">
             Check out the source code on{" "}
             <Link
-              href="https://github.com/Vinay-yele/Gradient-Website"
+              href="https://github.com/pranav1211/Gradient-Website"
               target="_blank"
               className="text-purple-400 hover:underline"
             >
