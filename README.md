@@ -17,8 +17,8 @@ Check out the Changelog : [Changelog](https://github.com/pranav1211/Gradient-Web
   - [**Gradient Week 2025**](https://gradientaiml.tech/gw25)
 - Gradient Week 2025 Recap page
   - [**Gradient Week 2025 Recap**](https://gradientaiml.tech/gw25recap)
-- - Gradient X Utsav Ananta 2025 page
-  - [**Gradient Week 2025 Recap**](https://gradientaiml.tech/utsav25)
+- Gradient X Utsav Ananta 2025 page
+  - [**Gradient X Utsav 2025**](https://gradientaiml.tech/utsav25)
 
 Feel free to explore, use, or contribute to the code in this repository. Contributions are welcome!
 
