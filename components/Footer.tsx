@@ -159,7 +159,8 @@ const Footer = () => {
               className="text-purple-400 hover:underline"
             >
               Pranav Veeraghanta
-            </Link> (Tech Head) and{" "}
+            </Link> (Tech Head) and {" "}
+            Consultation and Feedback by
             <Link
               href="https://vinayyele.live"
               target="_blank"
