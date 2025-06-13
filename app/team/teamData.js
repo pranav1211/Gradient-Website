@@ -30,8 +30,15 @@ export const teamData = [
         ],
     },
     {
+        title: "Content Heads",
+        members: [
+            { name: "Yashas Nandan", role: "", year: "", image: "https://gradient-content-server.vercel.app/content/yashas.JPG", github: "https://github.com/Yashas-Nandan", linkedin: "https://www.linkedin.com/in/yashas-nandan-399a0225a/" },
+            { name: "Ashrit", role: "", year: "", image: "https://gradient-content-server.vercel.app/content/ashrit.JPG", github: "https://github.com/24ashrit", linkedin: "https://www.linkedin.com/in/ashrit-m-a771442bb/" },
+        ]
+    },
+    {
         title: "Media and Sponsorship Heads",
-        members: [ 
+        members: [
             {
                 name: "Likith Chowdary",
                 role: "  ",
@@ -47,7 +54,7 @@ export const teamData = [
                 image: "https://gradient-content-server.vercel.app/content/supriya.JPG",
                 github: "https://github.com/SupriyaSGowda",
                 linkedin: "https://www.linkedin.com/in/supriya-c-s-54766b268/",
-            }
+            },
             {
                 name: "Varsh Gandhi",
                 role: "  ",
@@ -65,13 +72,6 @@ export const teamData = [
                 linkedin: "https://www.linkedin.com//",
             },
         ],
-    },
-    {
-        title: "Content Heads",
-        members: [
-            { name: "Yashas Nandan", role: "", year: "", image: "https://gradient-content-server.vercel.app/content/yashas.JPG", github: "https://github.com/Yashas-Nandan", linkedin: "https://www.linkedin.com/in/yashas-nandan-399a0225a/" },
-            { name: "Ashrit", role: "", year: "", image: "https://gradient-content-server.vercel.app/content/ashrit.JPG", github: "https://github.com/24ashrit", linkedin: "https://www.linkedin.com/in/ashrit-m-a771442bb/" },
-        ]
     }
 ];
 
