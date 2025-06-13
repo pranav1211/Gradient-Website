@@ -9,6 +9,7 @@ Visit our website: [GradientAIML.tech](https://GradientAIML.tech)
   - [**Pranav Veeraghanta**](https://beyondmebtw.com), Technical Head at Gradient
 - **Consultation and Feedback by:**
   - [**Vinay Yele**](https://vinayyele.live), Design Head at Gradient
+  - Pranav Jahagirdar
 
 Check out the Changelog : [Changelog](https://github.com/pranav1211/Gradient-Website/blob/main/Changelog.md)
 
