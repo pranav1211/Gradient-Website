@@ -30,13 +30,6 @@ export const teamData = [
         ],
     },
     {
-        title: "Content Heads",
-        members: [
-            { name: "Yashas Nandan", role: "", year: "", image: "https://gradient-content-server.vercel.app/content/yashas.JPG", github: "https://github.com/Yashas-Nandan", linkedin: "https://www.linkedin.com/in/yashas-nandan-399a0225a/" },
-            { name: "Ashrit", role: "", year: "", image: "https://gradient-content-server.vercel.app/content/ashrit.JPG", github: "https://github.com/24ashrit", linkedin: "https://www.linkedin.com/in/ashrit-m-a771442bb/" },
-        ]
-    },
-    {
         title: "Media and Sponsorship Heads",
         members: [
             {
@@ -72,7 +65,13 @@ export const teamData = [
                 linkedin: "https://www.linkedin.com//",
             },
         ],
-    }
+    },    {
+        title: "Content Heads",
+        members: [
+            { name: "Yashas Nandan", role: "", year: "", image: "https://gradient-content-server.vercel.app/content/yashas.JPG", github: "https://github.com/Yashas-Nandan", linkedin: "https://www.linkedin.com/in/yashas-nandan-399a0225a/" },
+            { name: "Ashrit", role: "", year: "", image: "https://gradient-content-server.vercel.app/content/ashrit.JPG", github: "https://github.com/24ashrit", linkedin: "https://www.linkedin.com/in/ashrit-m-a771442bb/" },
+        ]
+    },
 ];
 
 export default teamData;
