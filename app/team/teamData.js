@@ -48,22 +48,22 @@ export const teamData = [
                 github: "https://github.com/SupriyaSGowda",
                 linkedin: "https://www.linkedin.com/in/supriya-c-s-54766b268/",
             }
-            // {
-            //     name: "Varsh Gandhi",
-            //     role: "  ",
-            //     year: "",
-            //     image: "https://gradient-content-server.vercel.app/content/varsh.JPG",
-            //     github: "https://github.com/varsh0097",
-            //     linkedin: "https://www.linkedin.com/in/varsh-gandhi-ab242b1a9/",
-            // },
-            // {
-            //     name: "Sanjana Dhananjaya",
-            //     role: "",
-            //     year: "",
-            //     image: "https://gradient-content-server.vercel.app/content/sanj.JPG",
-            //     github: "https://github.com/Sanjanadai23",
-            //     linkedin: "https://www.linkedin.com/in/sanjana-dhananjaya-455386264/",
-            // },
+            {
+                name: "Varsh Gandhi",
+                role: "  ",
+                year: "",
+                image: "https://gradient-content-server.vercel.app/content/varsh.JPG",
+                github: "https://github.com/",
+                linkedin: "https://www.linkedin.com//",
+            },
+            {
+                name: "Sanjana Dhananjaya",
+                role: "",
+                year: "",
+                image: "https://gradient-content-server.vercel.app/content/sanj.JPG",
+                github: "https://github.com/",
+                linkedin: "https://www.linkedin.com//",
+            },
         ],
     },
     {
