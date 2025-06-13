@@ -167,7 +167,7 @@ const Footer = () => {
               className="text-purple-400 hover:underline"
             >
               Vinay Yele
-            </Link> (Design Head) at Gradient.
+            </Link> (Design Head) at Gradient and Pranav Jahagirdar
           </p>
           {/* Source Code Link */}
           <p className="mt-2">
