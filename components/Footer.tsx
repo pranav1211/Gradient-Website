@@ -29,7 +29,7 @@ const Footer = () => {
     <footer className="relative bg-gradient-to-b from-black to-gray-900 text-white">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/10 via-transparent to-transparent pointer-events-none" />
 
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           {/* About Section */}
           <motion.div
@@ -166,7 +166,7 @@ const Footer = () => {
               target="_blank"
               className="text-purple-400 hover:underline"
             >
-              Vinay Yele
+              &nbsp;Vinay Yele
             </Link> (Design Head) at Gradient.
           </p>
           {/* Source Code Link */}

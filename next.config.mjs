@@ -11,7 +11,7 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'gradient-content-server.vercel.app',
-        pathname: '/content/*', // Path pattern if you have specific folder structure
+        pathname: '/content/**', // Wildcard for everything under /content/
       },
     ],
   },

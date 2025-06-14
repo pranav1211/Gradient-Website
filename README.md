@@ -13,6 +13,15 @@ Visit our website: [GradientAIML.tech](https://GradientAIML.tech)
 
 Check out the Changelog : [Changelog](https://github.com/pranav1211/Gradient-Website/blob/main/Changelog.md)
 
+## Uncharted 3 : Lost Voyage
+  Uncharted Lost Voyage was a digital treasure hunt hosted during Utsav Ananta 2025, where participants solved various puzzles and challenges, racing against time and each other to claim victory.
+
+  The event was hosted on this site and has now been setup as a subdomain so that anyone can play.
+
+  The site : [**Uncharted3.GradientAIML.tech**](Uncharted3.gradientaiml.tech)
+
+  Github Repository : [**Github.com/pranav1211/Uncharted3**](Github.com/pranav1211/uncharted3)
+
 ## Archive
 - Gradient Week 2025 page
   - [**Gradient Week 2025**](https://gradientaiml.tech/gw25)

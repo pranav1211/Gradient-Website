@@ -31,78 +31,78 @@ const TeamMember = ({ name, role, year, image, github, linkedin }: TeamMember) =
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-    <div className="group relative h-full">
-      {/* Diagonal card with darker purple background */}
-      <div className="relative bg-purple-950/90 h-full overflow-hidden shadow-lg"
-        style={{ clipPath: 'polygon(0 0, 100% 0, 97% 100%, 0% 100%)' }}>
-        <div className="flex flex-col h-full">
-          {/* Diagonal overlay */}
-          <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-purple-900/20 to-transparent 
+      <div className="group relative h-full">
+        {/* Diagonal card with darker purple background */}
+        <div className="relative bg-purple-950/90 h-full overflow-hidden shadow-lg"
+          style={{ clipPath: 'polygon(0 0, 100% 0, 97% 100%, 0% 100%)' }}>
+          <div className="flex flex-col h-full">
+            {/* Diagonal overlay */}
+            <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-purple-900/20 to-transparent 
                          -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
 
-          {/* Content container */}
-          <div className="flex flex-col h-full">
-            {/* Image section */}
-            <div className="relative w-full">
-              <div className="relative w-full h-64 sm:h-72 md:h-80 overflow-hidden"
-                style={{ clipPath: 'polygon(0 0, 100% 0, 100% 90%, 0% 100%)' }}>
-                <Image
-                  src={image}
-                  alt={name}
-                  width={800}
-                  height={800}
-                  className="w-full h-full object-cover object-center transition-transform duration-700 
+            {/* Content container */}
+            <div className="flex flex-col h-full">
+              {/* Image section */}
+              <div className="relative w-full">
+                <div className="relative w-full h-64 sm:h-72 md:h-80 overflow-hidden"
+                  style={{ clipPath: 'polygon(0 0, 100% 0, 100% 90%, 0% 100%)' }}>
+                  <Image
+                    src={image}
+                    alt={name}
+                    width={800}
+                    height={800}
+                    className="w-full h-full object-cover object-center transition-transform duration-700 
                            scale-105 group-hover:scale-110"
-                  style={{ objectPosition: '50% 20%' }} // Focus more on faces
-                  priority
-                />
-                {/* Image overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-950/40 via-transparent to-purple-950/5" />
+                    style={{ objectPosition: '50% 20%' }} // Focus more on faces
+                    priority
+                  />
+                  {/* Image overlay gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-purple-950/40 via-transparent to-purple-950/5" />
+                </div>
               </div>
-            </div>
 
-            {/* Text content section below image */}
-            <div className="w-full p-5 flex flex-col items-center relative z-10">
-              {/* Purple accent line */}
-              <div className="w-16 h-1 bg-purple-500 mb-4 transform origin-center transition-all duration-300 
+              {/* Text content section below image */}
+              <div className="w-full p-5 flex flex-col items-center relative z-10">
+                {/* Purple accent line */}
+                <div className="w-16 h-1 bg-purple-500 mb-4 transform origin-center transition-all duration-300 
                             group-hover:w-24 group-hover:bg-fuchsia-500" />
 
-              <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-purple-500 transition-colors text-center">{name}</h3>
-              <p className="text-purple-200/90 font-medium text-base mt-2 text-center">{role}</p>
-              {year && <p className="text-zinc-400 text-sm mt-1 text-center">{year}</p>}
+                <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-purple-500 transition-colors text-center">{name}</h3>
+                <p className="text-purple-200/90 font-medium text-base mt-2 text-center">{role}</p>
+                {year && <p className="text-zinc-400 text-sm mt-1 text-center">{year}</p>}
 
-              {/* Social links */}
-              <div className="flex space-x-4 mt-4">
-                {github && (
-                  <a
-                    href={github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center bg-purple-800/60 hover:bg-purple-600 
+                {/* Social links */}
+                <div className="flex space-x-4 mt-4">
+                  {github && (
+                    <a
+                      href={github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center bg-purple-800/60 hover:bg-purple-600 
                              text-white p-2 rounded-md transition-colors transform hover:scale-105"
-                    aria-label={`${name}'s GitHub`}
-                  >
-                    <Github size={22} />
-                  </a>
-                )}
-                {linkedin && (
-                  <a
-                    href={linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center bg-purple-800/60 hover:bg-purple-600 
+                      aria-label={`${name}'s GitHub`}
+                    >
+                      <Github size={22} />
+                    </a>
+                  )}
+                  {linkedin && (
+                    <a
+                      href={linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center bg-purple-800/60 hover:bg-purple-600 
                              text-white p-2 rounded-md transition-colors transform hover:scale-105"
-                    aria-label={`${name}'s LinkedIn`}
-                  >
-                    <Linkedin size={22} />
-                  </a>
-                )}
+                      aria-label={`${name}'s LinkedIn`}
+                    >
+                      <Linkedin size={22} />
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </>
   );
 };

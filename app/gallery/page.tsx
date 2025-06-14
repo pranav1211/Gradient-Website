@@ -4,12 +4,16 @@ import Navbar from '@/components/Navbar'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Calendar, Clock, MapPin, ChevronDown, Users, ArrowRight, Image as ImageIcon,
-  ChevronLeft, ChevronRight, X, Star, Phone, Trophy, DollarSign
+  ChevronLeft, ChevronRight, X, Star, Phone, Trophy, DollarSign,
+  ArrowUpRight,
+  Play
 } from 'lucide-react'
 import { eventCategories } from './eventData'
 import { upcomingEvents } from './eventData'
 import Footer from '@/components/Footer'
 import Head from 'next/head'
+import Link from 'next/link'
+import Image from 'next/image'
 
 
 export default function Events() {
@@ -621,6 +625,89 @@ export default function Events() {
             </motion.div>
           )}
         </AnimatePresence>
+
+        <div className="flex items-center justify-center mb-12">
+          <div className="w-16 h-1 bg-purple-500" />
+          <h2 className="text-3xl md:text-4xl righteous-regular px-6 text-center text-white">
+            Special Showcases
+          </h2>
+          <div className="w-16 h-1 bg-purple-500" />
+        </div>
+
+        <motion.section
+          className="relative w-full py-16 md:py-20 overflow-hidden"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          {/* Content Container */}
+          <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+            <div className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 backdrop-blur-sm border border-purple-500/30 rounded-3xl p-8 md:p-12 shadow-2xl">
+              <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+
+                {/* Left Side - Game Image */}
+                <motion.div
+                  className="w-full lg:w-1/2"
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                >
+                  <div className="relative group">
+                    <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+                    <div className="relative bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-1">
+                      <Image
+                        src="https://gradient-content-server.vercel.app/content/utsav25/gallery/unc/ulvfs.png"
+                        alt="Uncharted Lost Voyage Game"
+                        width={600}
+                        height={400}
+                        className="w-full h-auto object-cover rounded-xl shadow-2xl transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Right Side - Game Info & CTA */}
+                <motion.div
+                  className="w-full lg:w-1/2 text-center lg:text-left"
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.6 }}
+                >
+                  {/* Description */}
+                  <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-8 space-y-4">
+                    Dive into <span className="text-yellow-300 font-medium">Gradient's immersive game</span>, where interconnected websites hide cryptic clues and thrilling puzzles.
+                    <br /><br />
+                    Solve challenges, uncover secrets, and piece together the ultimate mystery.
+                    <br />
+                    <span className="text-blue-300 font-semibold block mt-4">Are you ready to discover the lost treasures?</span>
+                  </p>
+
+
+                  {/* CTA Buttons */}
+                  <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+                    <Link
+                      href="/uncharted-lost-voyage"
+                      className="group relative inline-flex items-center justify-center px-8 py-4 overflow-hidden font-bold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-full sm:w-auto"
+                    >
+                      <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+                      <Play size={20} className="mr-2" />
+                      <span className="relative text-lg">Start Your Quest</span>
+                      <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    </Link>
+
+                    <Link
+                      href="/game-info"
+                      className="group inline-flex items-center justify-center px-8 py-4 border-2 border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-white rounded-full transition-all duration-300 transform hover:scale-105 font-semibold text-lg w-full sm:w-auto"
+                    >
+                      <span>Learn More</span>
+                      <ArrowUpRight size={20} className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                    </Link>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </motion.section>
       </div>
     </>
   )
