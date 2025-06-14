@@ -78,7 +78,7 @@ export default function Home() {
             {/* Right side (tagline on the left and Explore Now button on the right) */}
             <div className="flex flex-col md:flex-row items-center justify-center space-x-4 w-full md:w-auto text-center">
               <p className="text-green-100 text-lg md:text-xl font-medium">
-                Stay tuned for the recap!
+                Check out the recap!
               </p>
               <Link
                 href="/events"
