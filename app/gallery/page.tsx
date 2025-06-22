@@ -696,7 +696,7 @@ export default function Events() {
                     </Link>
 
                     <Link
-                      href="/game-info"
+                      href="https://uncharted3.gradientaiml.tech"
                       className="group inline-flex items-center justify-center px-8 py-4 border-2 border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-white rounded-full transition-all duration-300 transform hover:scale-105 font-semibold text-lg w-full sm:w-auto"
                     >
                       <span>Learn More</span>
