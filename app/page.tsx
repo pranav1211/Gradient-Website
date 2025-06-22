@@ -225,7 +225,7 @@ export default function Home() {
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
                     <Link
-                      href="/uncharted-lost-voyage"
+                      href="https://uncharted3.gradientaiml.tech"
                       className="group relative inline-flex items-center justify-center px-8 py-4 overflow-hidden font-bold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-full sm:w-auto"
                     >
                       <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
@@ -235,7 +235,7 @@ export default function Home() {
                     </Link>
 
                     <Link
-                      href="/game-info"
+                      href="https://uncharted3.gradientaiml.tech"
                       className="group inline-flex items-center justify-center px-8 py-4 border-2 border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-white rounded-full transition-all duration-300 transform hover:scale-105 font-semibold text-lg w-full sm:w-auto"
                     >
                       <span>Learn More</span>
