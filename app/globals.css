@@ -20,7 +20,10 @@ html {
 
 @layer utilities {
   .text-gradient {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #a78bfa, #7c3aed);
   }
 }
 
