@@ -2,7 +2,6 @@
 import { useState } from 'react'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
-import ScrollTop from '@/components/ScrollTop'
 import React from 'react';
 import { motion } from 'framer-motion'
 import {
@@ -161,7 +160,6 @@ export default function DepartmentWork() {
             backgroundSize: '40px 40px',
             backgroundColor: '#180336',
           }} />
-        <ScrollTop />
         <Navbar />
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-20 md:pt-24 pb-16 md:pb-20">
