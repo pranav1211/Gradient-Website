@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import { motion } from 'framer-motion'
-import { ArrowRight, ChevronDown, Calendar, Sparkles, ArrowUpRight, Compass, Trophy, Play } from 'lucide-react'
+import { ArrowRight, ChevronDown, Calendar, Sparkles, ArrowUpRight, Compass, Trophy, Play,Cpu,Activity,Zap } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
@@ -52,34 +52,41 @@ export default function Home() {
 
         <Navbar />
 
-        {/* Gradient X Utsav Banner */}
+        {/* Gradient X PS 2025 Banner */}
         <motion.div
-          className="relative w-full bg-gradient-to-r from-emerald-700 via-green-600 to-teal-600 py-4 mt-20 sm:mt-20 md:mt-24 mb-8 md:mb-12"
+          className="relative w-full bg-gradient-to-r from-purple-900 via-indigo-800 to-blue-800 py-6 mt-20 sm:mt-20 md:mt-24 mb-8 md:mb-12"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, type: "spring", stiffness: 100 }}
+          transition={{ duration: 0.7, type: 'spring', stiffness: 100 }}
         >
           <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="flex flex-col lg:flex-row items-center justify-center w-full space-y-4 lg:space-y-0">
-              {/* Centered content */}
-              <div className="flex items-center justify-center space-x-3 sm:space-x-4 text-center">
-                <Sparkles size={24} className="text-green-200 animate-pulse hidden lg:block" />
-                <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-3">
-                  <h2 className="font-bold text-2xl sm:text-3xl lg:text-3xl text-white">
-                    <span className="text-green-200">GRADIENT X UTSAV 2025</span>
-                  </h2>
-                  <p className="text-xl sm:text-2xl lg:text-2xl text-white font-semibold">
-                    Has Concluded
-                  </p>
-                  <span className="text-lg lg:text-xl text-green-100 font-medium mx-2 hidden sm:inline">-</span>
-                  <p className="text-lg lg:text-xl text-green-100 font-medium">
-                    Check out the recap!
-                  </p>
-                </div>
-                <Sparkles size={24} className="text-green-200 animate-pulse hidden lg:block" />
+            <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between w-full space-y-6 lg:space-y-0">
+
+              {/* Left: Event Name */}
+              <div className="flex items-center space-x-3">
+                <Zap size={30} className="text-amber-300 animate-pulse" />
+                <h2 className="font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white">
+                  <span className="text-amber-300">Gradient X</span> PhaseShift 2025
+                </h2>
+              </div>
+
+              {/* Center: Coming Soon */}
+              <div className="flex items-center space-x-3">
+                <Cpu size={28} className="text-amber-300 hidden sm:block animate-bounce" />
+                <p className="text-2xl sm:text-3xl lg:text-3xl text-white font-bold tracking-wide">
+                  Coming Soon
+                </p>
+                <Activity size={28} className="text-amber-300 hidden sm:block animate-bounce" />
+              </div>
+
+              {/* Right: Stay Tuned + Button */}
+              <div className="flex flex-col sm:flex-row lg:flex-row items-center lg:space-x-4 space-y-3 sm:space-y-0">
+                <p className="text-lg lg:text-xl text-amber-200 font-medium">
+                  Stay Tuned!
+                </p>
                 <Link
                   href="/events"
-                  className="group inline-flex items-center space-x-2 px-5 py-2 bg-green-200 hover:bg-green-100 rounded-lg transition-all duration-300 transform hover:scale-105 text-emerald-900 font-bold text-base lg:text-lg shadow-lg ml-4"
+                  className="group inline-flex items-center justify-center space-x-2 px-5 py-2 bg-amber-300 hover:bg-amber-200 rounded-lg transition-all duration-300 transform hover:scale-105 text-purple-900 font-bold text-base lg:text-lg shadow-lg"
                 >
                   <span>Explore Now</span>
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
@@ -88,6 +95,7 @@ export default function Home() {
             </div>
           </div>
         </motion.div>
+
 
         {/* Main content container with improved padding */}
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
@@ -213,7 +221,7 @@ export default function Home() {
                   transition={{ duration: 0.8, delay: 0.6 }}
                 >
                   {/* Description */}
-                  <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-8 space-y-4">                                        
+                  <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-8 space-y-4">
                     Dive into <span className="text-yellow-300 font-medium">Gradient's immersive game</span>, where interconnected websites hide cryptic clues and thrilling puzzles.
                     <br /><br />
                     Solve challenges, uncover secrets, and piece together the ultimate mystery.

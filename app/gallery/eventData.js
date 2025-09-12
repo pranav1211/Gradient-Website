@@ -1,38 +1,38 @@
 export const upcomingEvents = [
-    // {
-    //     title: "Jokes on You Again",
-    //     description: "A thrilling comedy show by Bangalore's very own Niroop Mohan, Join us for an show of laughter and entertainment as Niroop takes the stage to share his unique perspective on life, love, and everything in between.",
-    //     date: "May 10th, 2025",
-    //     time: "10:00 AM",
-    //     location: "Auditorium 1, Ground Floor, PJA Block, BMSCE",
-    //     category: "Utsav 2025",
-    //     status: "registration-open",
-    //     registrationFee: "₹150 per person",
-    //     prizePool: "N/A",
-    //     coordinators: [
-    //         { name: "R Suman", number: "+91 6363742183" },
-    //         { name: "Likith Chowdary", number: "+91 9900773333" }
-    //     ],
-    //     registrationLink: "https://events.bmsutsav.in/events/GRDJOY",
-    //     poster: "https://gradient-content-server.vercel.app/content/utsav25/JOY.png"
-    // },
-    // {
-    //     title: "Uncharted 3 : Lost Voyage",
-    //     description: "A thrilling high stakes online treasure hunt where participants embark on a quest to uncover hidden treasures and solve intricate puzzles. With a mix of technology and adventure, this event promises excitement and challenges.",
-    //     date: "May 9th, 2025",
-    //     time: "10:00 AM",
-    //     location: "MEL Lab 1 & 2, 7th Floor, PJA Block, BMSCE",
-    //     category: "Utsav 2025",
-    //     status: "registration-open",
-    //     registrationFee: "₹100 per team",
-    //     prizePool: "₹5,000",
-    //     coordinators: [
-    //         { name: "Pranav Veeraghanta", number: "+91 8073194166" },
-    //         { name: "Siddarth Sahay", number: "+91 9354868006" }
-    //     ],
-    //     registrationLink: "https://events.bmsutsav.in/events/GRDULV",
-    //     poster: "https://gradient-content-server.vercel.app/content/utsav25/UNC.png"
-    // },
+    {
+        title: "Fortune 404",
+        description: "Get ready for an adrenaline-charged Treasure Hunt that takes you across campus to crack clever riddles, race the clock, and unlock your starting stash. Then dive into the Investment Arena, where every twist in the storyline challenges your wits: decode clues, outsmart puzzles, and choose between bold, high-stakes moves or steady, calculated plays.",
+        date: "19th September 2025",
+        time: "10:00 AM",
+        location: "MEL Lab 03, PJ Block, 2nd Floor",
+        category: "Phaseshift 2025",
+        status: "registration-open",
+        registrationFee: "₹100 per team",
+        prizePool: "₹5000",
+        coordinators: [
+            { name: "Shriyans Naik", number: "+91 79825 31455" },
+            { name: "Divyam Jain", number: "+91 60099 13709" }
+        ],
+        registrationLink: "https://events.phaseshift.in/events/GRDFFO",
+        poster: "https://gradient-content-server.vercel.app/content/ps25/f404poster.png"
+    },
+    {
+        title: "AI Unplugged",
+        description: "A thrilling high stakes online treasure hunt where participants embark on a quest to uncover hidden treasures and solve intricate puzzles. With a mix of technology and adventure, this event promises excitement and challenges.",
+        date: "20th September 2025",
+        time: "2:00 PM",
+        location: "MEL-Seminar Hall, 7th floor",
+        category: "Phaseshift 2025",
+        status: "registration-open",
+        registrationFee: "₹50 Per Person",
+        prizePool: "N/A",
+        coordinators: [
+            { name: "Channabasavanna MB", number: "+91 76769 75495" },
+            { name: "Riya Kumari", number: "+91 82521 89462" }
+        ],
+        registrationLink: "https://events.phaseshift.in/events/GRDAUD",
+        poster: "https://gradient-content-server.vercel.app/content/ps25/aiunplugposter.png"
+    },
     // {
     //     title: "Sync or Sink",
     //     description: "A test of teamwork and strategy, where participants must work together to solve puzzles and challenges. You either Sync up with your teammates or Sink into the depths of despair.",

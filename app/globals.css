@@ -24,3 +24,6 @@ html {
   }
 }
 
+.animate-spin-slow {
+  animation: spin 10s linear infinite;
+}

@@ -12,7 +12,7 @@ const Footer = () => {
   ]
 
   const eventLinks = [    
-    { name: "Utsav Ananta", href: "/events" },
+    { name: "PhaseShift Meridian", href: "/events" },
     { name: "Event Gallery", href: "/gallery" }
   ]
 

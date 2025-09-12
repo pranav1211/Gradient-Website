@@ -148,7 +148,7 @@ export default function Events() {
             className="text-center mb-16"
           >
             <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold mt-6 md:mt-10 bree-serif-regular">
-              <span className="text-white opacity-100">Event </span>
+              <span style={{ color: '#ffffff', opacity: 1 }}>Event </span>
               <span style={{ color: '#C4B5FD', opacity: 1 }}>Gallery</span>
             </h1>
             <p className="text-2xl md:text-2xl mt-6 md:mt-8 font-light mx-auto max-w-3xl" style={{ color: '#DDD6FE' }}>
@@ -171,18 +171,30 @@ export default function Events() {
               <div className="w-16 h-1 bg-purple-500" />
             </div>
 
-            <p className="text-6xl md:text-6xl font-extrabold righteous-regular mb-7 text-transparent bg-clip-text bg-gradient-to-r from-red-300 via-blue-200 to-green-200 text-center">
-              Stay tuned for our upcoming events! We are cooking something good!
-            </p>
-
-            <div className="flex flex-col md:flex-row gap-6 py-4">
+            <div className={`
+    flex flex-col gap-6 py-4
+    ${upcomingEvents.length === 1
+                ? 'md:flex-row md:justify-center'
+                : upcomingEvents.length === 2
+                  ? 'md:flex-row md:justify-center md:gap-8'
+                  : 'md:flex-row'
+              }
+  `}>
               {upcomingEvents.map((event, index) => (
                 <motion.div
                   key={`upcoming-${index}`}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
-                  className="w-full md:w-1/3"
+                  className={`
+          w-full
+          ${upcomingEvents.length === 1
+                      ? 'md:w-1/2 md:max-w-md'
+                      : upcomingEvents.length === 2
+                        ? 'md:w-2/5 md:max-w-lg'
+                        : 'md:w-1/3'
+                    }
+        `}
                   onClick={() => setSelectedEvent(event)}
                 >
                   <div
