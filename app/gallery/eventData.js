@@ -18,7 +18,7 @@ export const upcomingEvents = [
     },
     {
         title: "AI Unplugged",
-        description: "A thrilling high stakes online treasure hunt where participants embark on a quest to uncover hidden treasures and solve intricate puzzles. With a mix of technology and adventure, this event promises excitement and challenges.",
+        description: "Get set for an immersive Hands-On Workshop that unpacks the secrets of RAG (Retrieval-Augmented Generation) and Prompt Engineering. Guided by Tulsi Patro, Prompt Engineer at Amazon, you’ll learn how to craft precise prompts, and see how RAG supercharges LLMs. Whether you’re new or sharpening your skills, It will be an innovative experience.",
         date: "20th September 2025",
         time: "2:00 PM",
         location: "MEL-Seminar Hall, 7th floor",
