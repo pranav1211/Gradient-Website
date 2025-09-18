@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
-import Navbar from '../components/Navbar'
+import Navbar from '../../components/Navbar'
 import { motion } from 'framer-motion'
 import { ArrowRight, ChevronDown, Calendar, Sparkles, ArrowUpRight, Compass, Trophy, Play, Cpu, Activity, Zap } from 'lucide-react'
 import Link from 'next/link'

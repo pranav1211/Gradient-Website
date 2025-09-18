@@ -25,7 +25,7 @@ const events = [
   },
   {
     title: "AI Unplugged",
-    description: "Get set for an immersive Hands-On Workshop that unpacks the secrets of RAG (Retrieval-Augmented Generation) and Prompt Engineering. Guided by Tulsi Patro, Prompt Engineer at Amazon, you’ll learn how to craft precise prompts, and see how RAG supercharges LLMs. Whether you’re new or sharpening your skills, It will be an innovative experience.",
+    description: "Get set for an immersive Hands-On Workshop that unpacks the secrets of RAG (Retrieval-Augmented Generation) and Prompt Engineering. Guided by Tulsi Patro, Prompt Engineer at Amazon, you'll learn how to craft precise prompts, and see how RAG supercharges LLMs. Whether you're new or sharpening your skills, It will be an innovative and an invaluable experience.",
     date: "20th September 2025",
     time: "2:00 PM",
     location: "MEL-Seminar Hall, 7th floor",
@@ -65,10 +65,10 @@ export default function EventsPage() {
       <div className="relative z-10 px-4 sm:px-6 lg:px-8">
         {/* Desktop Layout - Side by side with dynamic center */}
         <div className="hidden lg:flex items-start justify-center pt-20 pb-8 min-h-screen">
-          <div className="flex items-start justify-between w-full max-w-[1800px] mx-auto gap-4 xl:gap-6">
+          <div className="flex items-start justify-between w-full max-w-[1800px] mx-auto gap-2 lg:gap-3 xl:gap-4 2xl:gap-6">
             {/* Left Event Card */}
             <motion.div
-              className="w-[460px] xl:w-[500px] flex-shrink-0 mt-10"
+              className="w-[340px] lg:w-[380px] xl:w-[460px] 2xl:w-[500px] flex-shrink-0 mt-10"
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, type: "spring", stiffness: 120 }}
@@ -78,25 +78,25 @@ export default function EventsPage() {
 
             {/* Dynamic Center Title */}
             <motion.div
-              className="text-center mt-25 mx-4 xl:mx-6 flex-shrink-0 pt-32"
+              className="text-center mt-25 mx-2 lg:mx-3 xl:mx-4 2xl:mx-6 flex-shrink-0 pt-32"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, type: "spring", stiffness: 120 }}
             >
-              <h1 className="text-3xl xl:text-4xl 2xl:text-5xl font-extrabold drop-shadow-2xl mb-4 xl:mb-6">
+              <h1 className="text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-extrabold drop-shadow-2xl mb-3 lg:mb-4 xl:mb-6">
                 <span className="text-amber-300 drop-shadow-lg">Gradient&nbsp;</span>
                 <span className="text-amber-300 drop-shadow-lg">X</span>
                 <br />
                 <span className="text-white drop-shadow-lg">PhaseShift&nbsp;Meridian</span>
               </h1>
-              <p className="text-lg xl:text-xl 2xl:text-2xl font-bold text-amber-200 tracking-wide drop-shadow-lg">
+              <p className="text-base lg:text-lg xl:text-xl 2xl:text-2xl font-bold text-amber-200 tracking-wide drop-shadow-lg">
                 Events & Workshops
               </p>
             </motion.div>
 
             {/* Right Event Card */}
             <motion.div
-              className="w-[460px] xl:w-[500px] flex-shrink-0 mt-10"
+              className="w-[340px] lg:w-[380px] xl:w-[460px] 2xl:w-[500px] flex-shrink-0 mt-10"
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, type: "spring", stiffness: 120 }}
@@ -168,7 +168,7 @@ type EventType = {
 
 function EventCard({ event }: { event: EventType }) {
   return (
-    <div className="bg-white/10 backdrop-blur-xl rounded-3xl overflow-hidden shadow-2xl border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-[1.02] hover:shadow-3xl min-h-[800px] flex flex-col">
+    <div className="bg-white/10 backdrop-blur-xl rounded-3xl overflow-hidden shadow-2xl border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-[1.02] hover:shadow-3xl min-h-[700px] lg:min-h-[750px] xl:min-h-[800px] flex flex-col">
       {/* Event Poster - Square */}
       <div className="w-full aspect-square bg-gradient-to-r from-purple-600/30 to-blue-600/30 relative overflow-hidden flex-shrink-0">
         <img
@@ -193,47 +193,47 @@ function EventCard({ event }: { event: EventType }) {
       </div>
 
       {/* Event Content */}
-      <div className="p-5 lg:p-6 flex-1 flex flex-col">
-        <div className="mb-4">
-          <h3 className="text-xl lg:text-2xl font-bold text-white mb-2 leading-tight">{event.title}</h3>
+      <div className="p-4 lg:p-5 xl:p-6 flex-1 flex flex-col">
+        <div className="mb-3 lg:mb-4">
+          <h3 className="text-lg lg:text-xl xl:text-2xl font-bold text-white mb-2 leading-tight">{event.title}</h3>
         </div>
 
-        <p className="text-gray-200 text-sm leading-relaxed mb-4">
+        <p className="text-gray-200 text-xs lg:text-sm leading-relaxed mb-3 lg:mb-4">
           {event.description}
         </p>
 
         {/* Event Details Grid */}
-        <div className="grid grid-cols-1 gap-2 mb-4">
-          <div className="flex items-center text-sm text-gray-200 bg-white/5 rounded-lg p-2 border border-white/10">
-            <Calendar className="w-4 h-4 mr-2 text-amber-300 flex-shrink-0" />
+        <div className="grid grid-cols-1 gap-1.5 lg:gap-2 mb-3 lg:mb-4">
+          <div className="flex items-center text-xs lg:text-sm text-gray-200 bg-white/5 rounded-lg p-1.5 lg:p-2 border border-white/10">
+            <Calendar className="w-3 h-3 lg:w-4 lg:h-4 mr-2 text-amber-300 flex-shrink-0" />
             <span className="font-medium">{event.date}</span>
           </div>
-          <div className="flex items-center text-sm text-gray-200 bg-white/5 rounded-lg p-2 border border-white/10">
-            <Clock className="w-4 h-4 mr-2 text-amber-300 flex-shrink-0" />
+          <div className="flex items-center text-xs lg:text-sm text-gray-200 bg-white/5 rounded-lg p-1.5 lg:p-2 border border-white/10">
+            <Clock className="w-3 h-3 lg:w-4 lg:h-4 mr-2 text-amber-300 flex-shrink-0" />
             <span className="font-medium">{event.time}</span>
           </div>
-          <div className="flex items-center text-sm text-gray-200 bg-white/5 rounded-lg p-2 border border-white/10">
-            <MapPin className="w-4 h-4 mr-2 text-amber-300 flex-shrink-0" />
+          <div className="flex items-center text-xs lg:text-sm text-gray-200 bg-white/5 rounded-lg p-1.5 lg:p-2 border border-white/10">
+            <MapPin className="w-3 h-3 lg:w-4 lg:h-4 mr-2 text-amber-300 flex-shrink-0" />
             <span className="font-medium text-xs">{event.location}</span>
           </div>
-          <div className="flex items-center text-sm text-gray-200 bg-white/5 rounded-lg p-2 border border-white/10">
-            <Users className="w-4 h-4 mr-2 text-amber-300 flex-shrink-0" />
+          <div className="flex items-center text-xs lg:text-sm text-gray-200 bg-white/5 rounded-lg p-1.5 lg:p-2 border border-white/10">
+            <Users className="w-3 h-3 lg:w-4 lg:h-4 mr-2 text-amber-300 flex-shrink-0" />
             <span className="font-medium">{event.registrationFee}</span>
           </div>
           {event.prizePool !== "N/A" && (
-            <div className="flex items-center text-sm text-gray-200 bg-gradient-to-r from-amber-500/10 to-orange-500/10 rounded-lg p-2 border border-amber-500/30">
-              <Trophy className="w-4 h-4 mr-2 text-amber-300 flex-shrink-0" />
+            <div className="flex items-center text-xs lg:text-sm text-gray-200 bg-gradient-to-r from-amber-500/10 to-orange-500/10 rounded-lg p-1.5 lg:p-2 border border-amber-500/30">
+              <Trophy className="w-3 h-3 lg:w-4 lg:h-4 mr-2 text-amber-300 flex-shrink-0" />
               <span className="font-semibold text-amber-200">Prize Pool: {event.prizePool}</span>
             </div>
           )}
         </div>
 
         {/* Coordinators */}
-        <div className="mb-4 flex-1">
-          <h4 className="text-sm font-semibold text-white mb-2">Event Coordinators:</h4>
-          <div className="space-y-2">
+        <div className="mb-3 lg:mb-4 flex-1">
+          <h4 className="text-xs lg:text-sm font-semibold text-white mb-2">Event Coordinators:</h4>
+          <div className="space-y-1.5 lg:space-y-2">
             {event.coordinators.map((coordinator, idx) => (
-              <div key={idx} className="flex items-center justify-between bg-white/5 backdrop-blur-sm rounded-lg p-2 border border-white/10 hover:bg-white/10 transition-colors">
+              <div key={idx} className="flex items-center justify-between bg-white/5 backdrop-blur-sm rounded-lg p-1.5 lg:p-2 border border-white/10 hover:bg-white/10 transition-colors">
                 <span className="text-xs text-gray-200 font-medium">{coordinator.name}</span>
                 <a
                   href={`tel:${coordinator.number}`}
@@ -254,10 +254,10 @@ function EventCard({ event }: { event: EventType }) {
             href={event.registrationLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full bg-gradient-to-r from-amber-500/90 to-orange-500/90 hover:from-amber-600/90 hover:to-orange-600/90 backdrop-blur-sm text-white font-bold py-2 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center group text-sm border border-amber-500/40 shadow-lg"
+            className="w-full bg-gradient-to-r from-amber-500/90 to-orange-500/90 hover:from-amber-600/90 hover:to-orange-600/90 backdrop-blur-sm text-white font-bold py-2 px-3 lg:px-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center group text-xs lg:text-sm border border-amber-500/40 shadow-lg"
           >
             Register Now
-            <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            <ExternalLink className="w-3 h-3 lg:w-4 lg:h-4 ml-2 group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
       </div>
