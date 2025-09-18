@@ -31,6 +31,8 @@ Check out the Changelog : [Changelog](https://github.com/pranav1211/Gradient-Web
   - [**Gradient X Utsav 2025**](https://gradientaiml.tech/utsav25)
 - Gradient X Utsav Ananta 2025 Recap page
   - [**Gradient X Utsav 2025 Recap**](https://gradientaiml.tech/utsav25recap)
+- Gradient X PhaseShift Meredian 2025 page
+  - [**Gradient X PhaseShift 2025 Recap**](https://gradientaiml.tech/ps25)
 
 Feel free to explore, use, or contribute to the code in this repository. Contributions are welcome!
 

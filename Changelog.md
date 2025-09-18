@@ -1,4 +1,8 @@
 ### **September 2025**
+- 18/09/25 (Pranav)
+  - added a special page for phaseshift 2025
+  - fixed an issue in events gallery regarding mismatched data
+
 - 12/09/25 (Pranav)
   - Changed the events page for Phaseshift 2025
   - utsav25 recap now viewable as archive
