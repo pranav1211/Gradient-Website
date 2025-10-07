@@ -49,7 +49,7 @@ export default function Navbar() {
             href="/"
             className="flex items-center space-x-3 flex-shrink-0 group transition-all duration-300"
           >
-            <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center overflow-hidden">
+            <div className="relative w-16 h-16 md:w-20 md:h-20 flex items-center justify-center overflow-hidden">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
