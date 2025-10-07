@@ -6,7 +6,7 @@ export const upcomingEvents = [
         time: "10:00 AM",
         location: "MEL Lab 03, PJ Block, 2nd Floor",
         category: "Phaseshift 2025",
-        status: "registration-open",
+        status: "completed",
         registrationFee: "₹100 per team",
         prizePool: "₹5000",
         coordinators: [
@@ -23,7 +23,7 @@ export const upcomingEvents = [
         time: "2:00 PM",
         location: "MEL-Seminar Hall, 7th floor",
         category: "Phaseshift 2025",
-        status: "registration-open",
+        status: "completed",
         registrationFee: "₹50 Per Person",
         prizePool: "N/A",
         coordinators: [
