@@ -171,7 +171,7 @@ const Footer = () => {
               target="_blank"
               className="text-purple-400 hover:underline"
             >
-              &nbsp;Pranav Jahagridar
+              &nbsp;Pranav Jahagirdar
             </Link>.
           </p>
           {/* Source Code Link */}
