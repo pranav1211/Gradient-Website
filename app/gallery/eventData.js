@@ -438,31 +438,31 @@ export const specialShowcases = [
     {
         title: "Gradient Week 2025",
         description: "Explore the official page for Gradient Week 2025, our flagship annual Tech Innovation Week featuring hackathons, workshops, and tech showcases.",
-        image: "https://gradient-content-server.vercel.app/content/gallery/recap/special/3.webp",
+        image: "https://gradient-content-server.vercel.app/content/gallery/special/3.webp",
         link: "https://gradientaiml.tech/gw25"
     },
     {
         title: "Gradient Week 2025 Recap",
         description: "Relive the highlights and memorable moments from Gradient Week 2025 through our comprehensive event recap.",
-        image: "https://gradient-content-server.vercel.app/content/gallery/recap/special/4.webp",
+        image: "https://gradient-content-server.vercel.app/content/gallery/special/4.webp",
         link: "https://gradientaiml.tech/gw25recap"
     },
     {
         title: "Gradient X Utsav 2025",
         description: "Discover our exciting collaboration with Utsav Ananta 2025, BMSCE's annual cultural festival, featuring unique events and showcases.",
-        image: "https://gradient-content-server.vercel.app/content/utsav25/gallery/special/5.webp",
+        image: "https://gradient-content-server.vercel.app/content/gallery/special/5.webp",
         link: "https://gradientaiml.tech/utsav25"
     },
     {
         title: "Gradient X Utsav 2025 Recap",
         description: "Browse through the unforgettable moments and achievements from our partnership with Utsav Ananta 2025.",
-        image: "https://gradient-content-server.vercel.app/content/utsav25/gallery/special/6.webp",
+        image: "https://gradient-content-server.vercel.app/content/gallery/special/6.webp",
         link: "https://gradientaiml.tech/utsav25recap"
     },
     {
         title: "Gradient X PhaseShift 2025",
         description: "Visit our dedicated page for PhaseShift Meridian 2025, BMSCE's premier technical symposium, showcasing our innovative events and workshops.",
-        image: "https://gradient-content-server.vercel.app/content/special/7.webp",
+        image: "https://gradient-content-server.vercel.app/content/gallery/special/7.webp",
         link: "https://gradientaiml.tech/ps25"
     }
 ];

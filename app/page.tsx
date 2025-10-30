@@ -54,7 +54,7 @@ export default function Home() {
 
 
         {/* Main content container with improved padding */}
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 mt-16">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 mt-26 sm:mt-26 md:mt-26">
           {/* Hero section with better height and spacing */}
           <div className="flex flex-col lg:flex-row items-center justify-between min-h-[65vh] gap-8 lg:gap-12">
 

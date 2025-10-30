@@ -208,7 +208,7 @@ export default function About() {
                   </div>
 
                   <div className="group relative overflow-hidden rounded-lg shadow-lg">
-                    {/* <div className="h-64 w-full overflow-hidden">
+                    <div className="h-64 w-full overflow-hidden">
                       <img
                         src="https://gradient-content-server.vercel.app/content/posters/hacka24.webp"
                         alt="Our Biggest Hackathon"
@@ -219,7 +219,7 @@ export default function About() {
                     <div className="absolute bottom-4 left-4">
                       
                       <p className="text-white text-lg font-medium">Our Biggest Hackathon</p>
-                    </div> */}
+                    </div>
                   </div>
                 </div>
               </div>
