@@ -9,7 +9,6 @@ import {
   Users,
   Building2,
   Microscope,
-  GraduationCap,
   Microchip,
   Server,
   Cpu,
@@ -30,9 +29,9 @@ import Head from 'next/head'
 
 
 const stats = [
-  { label: 'Research Papers', value: '50+', icon: Microscope },
+  { label: 'Research Papers', value: '10+', icon: Microscope },
   { label: 'Faculty Members', value: '25+', icon: Users },
-  { label: 'Students Placed', value: '250+', icon: Building2 },
+  { label: 'Students Placed', value: '200+', icon: Building2 },
   { label: 'Student Achievements', value: '100+', icon: Trophy }
 ]
 
@@ -162,7 +161,7 @@ export default function DepartmentWork() {
           }} />
         <Navbar />
 
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-20 md:pt-24 pb-16 md:pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 md:pt-24 pb-16 md:pb-20">
           <div className="mb-4 md:mb-10 relative">
             <motion.div
               initial={{ opacity: 0, y: -20 }}
@@ -211,6 +210,95 @@ export default function DepartmentWork() {
                         <p className="text-lg">{stat.label}</p>
                       </div>
                     ))}
+                  </div>
+                </div>
+              </div>
+            </motion.section>
+
+            {/* PhaseShift 2025 Victory Section */}
+            <motion.section
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.25 }}
+            >
+              <div className="relative bg-purple-950/90 overflow-hidden shadow-lg p-8 md:p-10"
+                style={{ clipPath: 'polygon(0 0, 100% 0, 97% 100%, 3% 100%)' }}>
+
+                <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-purple-900/20 to-transparent -skew-x-12" />
+
+                <div className="relative z-10">
+                  <div className="flex items-center justify-center mb-8">
+                    <div className="w-16 h-1 bg-purple-500" />
+                    <h2 className="text-3xl md:text-4xl righteous-regular px-6 text-center text-white">
+                      PhaseShift 2025 Champions
+                    </h2>
+                    <div className="w-16 h-1 bg-purple-500" />
+                  </div>
+
+                  {/* Image on top - 16:9 aspect ratio */}
+                  <motion.div
+                    className="relative rounded-xl overflow-hidden w-full aspect-video shadow-lg mb-8 max-w-5xl mx-auto"
+                    whileHover={{ scale: 1.01 }}
+                    transition={{ duration: 0.2 }}
+                    style={{ clipPath: 'polygon(0 0, 100% 0, 99% 100%, 1% 100%)' }}
+                  >
+                    <Image
+                      src="/mlps25.jpeg"
+                      alt="PhaseShift 2025 Victory"
+                      loading="lazy"
+                      className="object-cover"
+                      fill
+                    />                    
+                  </motion.div>
+
+                  {/* Content below */}
+                  <div className="space-y-8 text-purple-100">
+                    <div className="flex items-center justify-center gap-4 mb-4">
+                      <Trophy className="text-yellow-400" size={56} />
+                      <span className="text-4xl md:text-5xl font-bold text-yellow-400">1st Place</span>
+                    </div>
+
+                    <h3 className="text-3xl md:text-4xl font-bold text-white righteous-regular text-center">
+                      Project Stalls Category Winner
+                    </h3>
+
+                    <div className="max-w-5xl mx-auto space-y-6">
+                      <p className="text-xl md:text-2xl leading-relaxed text-center">
+                        In a remarkable display of innovation and excellence, the <span className="text-purple-300 font-semibold">Department of Machine Learning</span> clinched <span className="text-yellow-400 font-bold">first place</span> in the Project Stalls category at <span className="text-purple-300 font-semibold">PhaseShift 2025</span>.
+                      </p>
+
+                      <p className="text-xl md:text-2xl leading-relaxed text-center">
+                        What makes this victory even more impressive? <span className="text-purple-300 font-bold">We outperformed departments with years—even decades more experience than us.</span> As one of the newest departments at BMSCE, we proved that innovation, dedication, and cutting-edge expertise trump legacy every time.
+                      </p>
+                    </div>
+
+                    {/* Acknowledgments */}
+                    <div className="max-w-4xl mx-auto mt-12 text-center space-y-8">
+                      <p className="text-xl md:text-2xl leading-relaxed text-purple-200">
+                        We thank our faculty coordinators
+                      </p>
+
+                      <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+                        <span className="text-2xl md:text-2xl font-bold text-gray-300">Dr. Monika Puttaramaiah</span>
+                        <span className="text-2xl md:text-2xl font-bold text-gray-300">Soniya L</span>
+                      </div>
+
+                      <p className="text-xl md:text-2xl leading-relaxed text-purple-200 pt-6">
+                        We also thank our dedicated students
+                      </p>
+
+                      <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+                        {['Pranav Veeraghanta', 'Likith Chowdary', 'Rishi', 'S Sanjana', 'Sowmi', 'Vikhyat', 'Abhinav'].map((name, index) => (
+                          <span key={index} className="text-lg md:text-xl font-semibold text-yellow-400">{name}</span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Final tagline */}
+                    <div className="flex items-center justify-center gap-3 text-purple-300 text-xl md:text-2xl italic font-semibold mt-8">
+                      <Award size={28} />
+                      <span>This is just the beginning</span>
+                    </div>
                   </div>
                 </div>
               </div>

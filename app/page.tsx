@@ -52,52 +52,9 @@ export default function Home() {
 
         <Navbar />
 
-        {/* Gradient X PS 2025 Banner */}
-        <motion.div
-          className="relative w-full bg-gradient-to-r from-purple-900 via-indigo-800 to-blue-800 py-6 mt-20 sm:mt-20 md:mt-24 mb-8 md:mb-12"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, type: 'spring', stiffness: 100 }}
-        >
-          <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between w-full space-y-6 lg:space-y-0 lg:space-x-8">
-              {/* Event Name */}
-              <div className="flex items-center justify-center lg:justify-start space-x-3 text-center lg:text-left">
-                <Zap size={30} className="text-amber-300 animate-pulse" />
-                <h2 className="font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white">
-                  <span className="text-amber-300">Gradient X</span> PhaseShift 2025
-                </h2>
-              </div>
-
-              {/* Date */}
-              <div className="flex items-center justify-center space-x-3 text-center">
-                <Cpu size={28} className="text-amber-300 hidden sm:block animate-bounce" />
-                <p className="text-2xl sm:text-3xl lg:text-3xl text-white font-bold tracking-wide">
-                  19-20 September 2025
-                </p>
-                <Activity size={28} className="text-amber-300 hidden sm:block animate-bounce" />
-              </div>
-
-              {/* Call to Action */}
-              <div className="flex flex-col items-center text-center lg:items-end lg:text-right space-y-3">
-                <p className="text-lg lg:text-xl text-amber-200 font-medium">
-                  Workshops and Events!
-                </p>
-                <Link
-                  href="/events"
-                  className="group inline-flex items-center justify-center space-x-2 px-5 py-2 bg-amber-300 hover:bg-amber-200 rounded-lg transition-all duration-300 transform hover:scale-105 text-purple-900 font-bold text-base lg:text-lg shadow-lg"
-                >
-                  <span>Explore Now</span>
-                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
 
         {/* Main content container with improved padding */}
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 mt-16">
           {/* Hero section with better height and spacing */}
           <div className="flex flex-col lg:flex-row items-center justify-between min-h-[65vh] gap-8 lg:gap-12">
 

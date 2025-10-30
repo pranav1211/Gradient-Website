@@ -1,3 +1,13 @@
+### **October 2025**
+- 30/10/25 (Pranav)
+  - removed banner from the home page.
+  - removed the special event page as no special events are scheduled as of now.
+  - updated events gallery to add the phaseshift events and a standalone event
+  - added the special websites archive as a special showcase in the events gallery
+  - removed upcoming events section in the events gallery
+  - added the achievement section in the dept of ml page
+  - added a page for the full screen gradient logo backgrounds
+
 ### **September 2025**
 - 18/09/25 (Pranav)
   - added a special page for phaseshift 2025

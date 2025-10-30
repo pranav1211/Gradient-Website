@@ -8,8 +8,8 @@ import {
   ArrowUpRight,
   Play
 } from 'lucide-react'
-import { eventCategories } from './eventData'
-import { upcomingEvents } from './eventData'
+import { eventCategories, specialShowcases } from './eventData'
+// import { upcomingEvents } from './eventData'
 import Footer from '@/components/Footer'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -156,8 +156,9 @@ export default function Events() {
             </p>
           </motion.div>
 
-          {/* Upcoming Events Section */}
-          <motion.section
+            {/* Upcoming Events Section */}
+          <div>
+          {/* <motion.section
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
@@ -171,37 +172,21 @@ export default function Events() {
               <div className="w-16 h-1 bg-purple-500" />
             </div>
 
-            <div className={`
-    flex flex-col gap-6 py-4
-    ${upcomingEvents.length === 1
-                ? 'md:flex-row md:justify-center'
-                : upcomingEvents.length === 2
-                  ? 'md:flex-row md:justify-center md:gap-8'
-                  : 'md:flex-row'
-              }
-  `}>
+            <div
+              className={`flex flex-col gap-6 py-4${upcomingEvents.length === 1? 'md:flex-row md:justify-center': upcomingEvents.length === 2? 'md:flex-row md:justify-center md:gap-8': 'md:flex-row'}`}
+            >
               {upcomingEvents.map((event, index) => (
                 <motion.div
                   key={`upcoming-${index}`}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
-                  className={`
-          w-full
-          ${upcomingEvents.length === 1
-                      ? 'md:w-1/2 md:max-w-md'
-                      : upcomingEvents.length === 2
-                        ? 'md:w-2/5 md:max-w-lg'
-                        : 'md:w-1/3'
-                    }
-        `}
+                  className={`w-full${upcomingEvents.length === 1? 'md:w-1/2 md:max-w-md': upcomingEvents.length === 2? 'md:w-2/5 md:max-w-lg': 'md:w-1/3'}`}
                   onClick={() => setSelectedEvent(event)}
-                >
-                  <div
-                    className="relative group cursor-pointer bg-purple-950/90 border border-purple-500/20 hover:border-purple-500/60 transition-all duration-300 rounded-lg overflow-hidden shadow-lg h-full flex flex-col"
-                  >
+                > */}
+                  {/* <div className="relative group cursor-pointer bg-purple-950/90 border border-purple-500/20 hover:border-purple-500/60 transition-all duration-300 rounded-lg overflow-hidden shadow-lg h-full flex flex-col"> */}
                     {/* Event status badge */}
-                    {event.status && (
+                    {/* {event.status && (
                       <div className="absolute top-3 right-3 z-20">
                         {event.status === "registration-open" && (
                           <span className="px-3 py-1 text-xs font-medium bg-purple-600 text-white rounded-full border border-purple-400/30 shadow-md">
@@ -214,10 +199,10 @@ export default function Events() {
                           </span>
                         )}
                       </div>
-                    )}
+                    )} */}
 
                     {/* Event image - Square aspect ratio */}
-                    {event.poster && (
+                    {/* {event.poster && (
                       <div className="event-poster-container">
                         <img
                           src={event.poster}
@@ -230,24 +215,30 @@ export default function Events() {
                     <div className="p-6 flex-1 flex flex-col">
                       <div className="flex items-center gap-2 mb-1">
                         <Star size={16} className="text-yellow-400" fill="#FBBF24" />
-                        <span className="text-yellow-200 text-sm font-medium">{event.category}</span>
+                        <span className="text-yellow-200 text-sm font-medium">
+                          {event.category}
+                        </span>
                       </div>
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-300">
                         {event.title}
-                      </h3>
+                      </h3> */}
 
-                      {/* Registration fee and prize pool for upcoming events - ENHANCED */}
-                      <div className="text-purple-200 mb-4 flex-1">
+                      {/* Registration fee and prize pool for upcoming events */}
+                      {/* <div className="text-purple-200 mb-4 flex-1">
                         {event.registrationFee && (
                           <div className="flex items-center gap-2 mb-2 bg-purple-800/40 p-2 rounded-lg">
                             <DollarSign size={18} className="text-purple-300" />
-                            <span className="font-medium">Registration: <span className="text-white">{event.registrationFee}</span></span>
+                            <span className="font-medium">
+                              Registration: <span className="text-white">{event.registrationFee}</span>
+                            </span>
                           </div>
                         )}
                         {event.prizePool && (
                           <div className="flex items-center gap-2 mb-2 bg-purple-800/40 p-2 rounded-lg">
                             <Trophy size={18} className="text-yellow-300" />
-                            <span className="font-medium">Prize Pool: <span className="text-yellow-100">{event.prizePool}</span></span>
+                            <span className="font-medium">
+                              Prize Pool: <span className="text-yellow-100">{event.prizePool}</span>
+                            </span>
                           </div>
                         )}
                         {event.date && (
@@ -256,10 +247,10 @@ export default function Events() {
                             <span>{event.date}</span>
                           </div>
                         )}
-                      </div>
+                      </div> */}
 
                       {/* "Explore" button at the bottom */}
-                      <div className="flex items-center justify-center bg-purple-700/30 rounded-lg py-3 px-4 gap-2 group-hover:bg-purple-700/50 transition-colors duration-300 mt-auto">
+                      {/* <div className="flex items-center justify-center bg-purple-700/30 rounded-lg py-3 px-4 gap-2 group-hover:bg-purple-700/50 transition-colors duration-300 mt-auto">
                         <ArrowRight size={18} className="text-purple-300" />
                         <span className="text-base font-medium text-purple-200">Explore</span>
                       </div>
@@ -267,8 +258,9 @@ export default function Events() {
                   </div>
                 </motion.div>
               ))}
-            </div>
-          </motion.section>
+            </div> */}
+          {/* </motion.section> */}
+          </div>
 
           <div className="flex items-center justify-center mb-12">
             <div className="w-16 h-1 bg-purple-500" />
@@ -646,6 +638,7 @@ export default function Events() {
           <div className="w-16 h-1 bg-purple-500" />
         </div>
 
+        {/* Uncharted Game Showcase */}
         <motion.section
           className="relative w-full py-16 md:py-20 overflow-hidden"
           initial={{ opacity: 0, y: 50 }}
@@ -718,6 +711,58 @@ export default function Events() {
                 </motion.div>
               </div>
             </div>
+          </div>
+        </motion.section>
+
+        {/* Special Pages Grid */}
+        <motion.section
+          className="max-w-6xl mx-auto px-4 sm:px-6 pb-16 md:pb-20"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.4 }}
+        >
+          <div className="event-card-grid">
+            {specialShowcases.map((showcase, index) => (
+              <motion.div
+                key={`showcase-${index}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
+                className="cursor-pointer"
+              >
+                <div className="group h-full bg-purple-950/90 relative overflow-hidden border border-purple-500/20 hover:border-purple-500/60 transition-all duration-300 rounded-lg shadow-lg flex flex-col">
+                  {/* Image - Square aspect ratio */}
+                  <div className="event-poster-container">
+                    <img
+                      src={showcase.image}
+                      alt={showcase.title}
+                      className="event-poster-image transition-transform duration-700 scale-100 group-hover:scale-110"
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div className="relative z-10 p-6 flex-1 flex flex-col">
+                    <h3 className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors duration-300 mb-3">
+                      {showcase.title}
+                    </h3>
+                    <p className="text-purple-200 text-sm mb-4 flex-1">
+                      {showcase.description}
+                    </p>
+
+                    {/* Visit Page button at the bottom */}
+                    <Link
+                      href={showcase.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center bg-purple-700/30 rounded-lg py-3 px-4 gap-2 group-hover:bg-purple-700/50 transition-colors duration-300"
+                    >
+                      <ArrowUpRight size={18} className="text-purple-300" />
+                      <span className="text-base font-medium text-purple-200">Visit Page</span>
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </motion.section>
       </div>

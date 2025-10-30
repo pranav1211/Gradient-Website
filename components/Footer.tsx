@@ -12,7 +12,7 @@ const Footer = () => {
   ]
 
   const eventLinks = [    
-    { name: "PhaseShift Meridian", href: "/events" },
+    // { name: "PhaseShift Meridian", href: "/events" },
     { name: "Event Gallery", href: "/gallery" }
   ]
 
@@ -159,14 +159,20 @@ const Footer = () => {
               className="text-purple-400 hover:underline"
             >
               Pranav Veeraghanta
-            </Link> (Tech Head) and
+            </Link> (Tech Head). Feedback and Consultation by
             <Link
               href="https://vinayyele.live"
               target="_blank"
               className="text-purple-400 hover:underline"
             >
               &nbsp;Vinay Yele
-            </Link> (Design Head) at Gradient.
+            </Link> (Design Head) at Gradient and <Link
+              href="https://www.linkedin.com/in/pranav-jahagirdar-b34024255/"
+              target="_blank"
+              className="text-purple-400 hover:underline"
+            >
+              &nbsp;Pranav Jahagridar
+            </Link>.
           </p>
           {/* Source Code Link */}
           <p className="mt-2">
