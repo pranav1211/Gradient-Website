@@ -167,7 +167,7 @@ const Footer = () => {
             >
               &nbsp;Vinay Yele
             </Link> (Design Head) at Gradient and <Link
-              href="https://www.linkedin.com/in/pranav-jahagirdar-b34024255/"
+              href="https://www.linkedin.com/in/pranav-jahadar-b34024255/"
               target="_blank"
               className="text-purple-400 hover:underline"
             >
