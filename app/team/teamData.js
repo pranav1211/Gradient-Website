@@ -1,155 +1,126 @@
 // teamData.js
 export const teamData = [
-    {
-        title: "Club Coordinators",
-        members: [
-            {
-                name: "Sudhanva Bharadwaj",
-                role: "",
-                year: "",
-                image: "https://gradient-content-server.vercel.app/content/core25/sudhanva.png",
-                github: "https://github.com/sudhanvabharadwaj",
-                linkedin: "https://www.linkedin.com/in/sudhanva-bharadwaj/",
-            },
-            {
-                name: "Shashank Sharma",
-                role: "",
-                year: "",
-                image: "https://gradient-content-server.vercel.app/content/core25/CShashank.JPG",
-                github: "https://github.com/csshashanksharma",
-                linkedin: "https://www.linkedin.com/in/c-s-shashank-sharma-58532b277/",
-            },
-        ],
-    },
-    {
-        title: "Technical Heads",
-        members: [
-            {
-                name: "Pranav Veeraghanta",
-                role: "",
-                year: "",
-                image: "https://gradient-content-server.vercel.app/content/core25/pranav.JPG",
-                github: "https://github.com/pranav1211",
-                linkedin: "https://www.linkedin.com/in/pranav-veeraghanta/",
-            },
-            {
-                name: "Siddharth Sahay",
-                role: "",
-                year: "",
-                image: "https://gradient-content-server.vercel.app/content/core25/sid.JPG",
-                github: "https://github.com/siddzzzz",
-                linkedin: "https://www.linkedin.com/in/siddharth-sahay-9a8365254/",
-            },
-        ],
-    },
-    {
-        title: "Design Heads",
-        members: [
-            {
-                name: "Vinay Yele",
-                role: "",
-                year: "",
-                image: "https://gradient-content-server.vercel.app/content/core25/yele.JPG",
-                github: "https://github.com/Vinay-yele",
-                linkedin: "https://www.linkedin.com/in/vinay-yele-08ab08295/",
-            },
-            {
-                name: "Deepali U",
-                role: "",
-                year: "",
-                image: "https://gradient-content-server.vercel.app/content/core25/deepali.JPG",
-                github: "https://github.com/deepali9976",
-                linkedin: "http://linkedin.com/in/deepali-u-10a78a306",
-            },
-        ],
-    },
-    {
-        title: "Logistics Heads",
-        members: [
-            {
-                name: "R Suman",
-                role: "",
-                year: "",
-                image: "https://gradient-content-server.vercel.app/content/core25/suman.JPG",
-                github: "https://github.com/Suman302004",
-                linkedin: "https://www.linkedin.com/in/suman-rudraswamy-53450b25b/",
-            },
-            {
-                name: "Vignesh Madan",
-                role: "",
-                year: "",
-                image: "https://gradient-content-server.vercel.app/content/core25/vignesh.JPG",
-                github: "https://github.com/VIGNESHMADAN",
-                linkedin: "https://www.linkedin.com/in/vignesh-madan-6505a4275/",
-            },
-            {
-                name: "Sakhamoori Krishna Saket",
-                role: "",
-                year: "",
-                image: "https://gradient-content-server.vercel.app/content/core25/saket.JPG",
-                github: "https://github.com/SakhamooriKrishnasaket",
-                linkedin: "https://www.linkedin.com/in/krishna-saket-sakhamoori-82349b278/",
-            },
-        ],
-    },
-    {
-        title: "Media and Sponsorship Heads",
-        members: [
-            {
-                name: "Likith Chowdary",
-                role: "",
-                year: "",
-                image: "https://gradient-content-server.vercel.app/content/core25/likith.JPG",
-                github: "https://github.com/LikithChowdary2807",
-                linkedin: "https://www.linkedin.com/in/likith-chowdary-154204300",
-            },
-            {
-                name: "Supriya Gowda",
-                role: "",
-                year: "",
-                image: "https://gradient-content-server.vercel.app/content/core25/supriya.JPG",
-                github: "https://github.com/SupriyaSGowda",
-                linkedin: "https://www.linkedin.com/in/supriya-c-s-54766b268/",
-            },
-            {
-                name: "Varsh Gandhi",
-                role: "",
-                year: "",
-                image: "https://gradient-content-server.vercel.app/content/core25/varsh.JPEG",
-                github: "https://github.com/",
-                linkedin: "https://www.linkedin.com//",
-            },
-            {
-                name: "Sanjana Dhananjaya",
-                role: "",
-                year: "",
-                image: "https://gradient-content-server.vercel.app/content/core25/sanj.JPEG",
-                github: "https://github.com/",
-                linkedin: "https://www.linkedin.com//",
-            },
-        ],
-    },
-    {
-        title: "Content Heads",
-        members: [
-            {
-                name: "Yashas Nandan",
-                role: "",
-                year: "",
-                image: "https://gradient-content-server.vercel.app/content/core25/yashas.JPG",
-                github: "https://github.com/Yashas-Nandan",
-                linkedin: "https://www.linkedin.com/in/yashas-nandan-399a0225a/",
-            },
-            {
-                name: "Ashrit",
-                role: "",
-                year: "",
-                image: "https://gradient-content-server.vercel.app/content/core25/ashrit.JPG",
-                github: "https://github.com/24ashrit",
-                linkedin: "https://www.linkedin.com/in/ashrit-m-a771442bb/",
-            },
-        ],
-    },
+  {
+    title: "Club Coordinators",
+    members: [
+      {
+        name: "S Sanjana",
+        role: "",
+        year: "",
+        image: "https://gradient-content-server.vercel.app/content/core26/Sanjana.JPG",
+        github: "https://github.com/SSanjana-17",
+        linkedin: "https://www.linkedin.com/in/s-sanjana-816788292",
+      },
+      {
+        name: "Divyam Jain",
+        role: "",
+        year: "",
+        image: "https://gradient-content-server.vercel.app/content/core26/Divyam.JPG",
+        github: "",
+        linkedin: "https://www.linkedin.com/in/divyamjainn",
+      },
+    ],
+  },
+  {
+    title: "Technical Heads",
+    members: [
+      {
+        name: "Rahul",
+        role: "",
+        year: "",
+        image: "https://gradient-content-server.vercel.app/content/core26/Rahul.JPG",
+        github: "https://github.com/RahulH007",
+        linkedin: "https://www.linkedin.com/in/rahulhongekar",
+      },
+      {
+        name: "Fasi Owaiz Ahmed",
+        role: "",
+        year: "",
+        image: "https://gradient-content-server.vercel.app/content/core26/Fasi.JPG",
+        github: "https://github.com/fasi-0p",
+        linkedin: "https://linkedin.com/in/fasii"
+      }
+    ],
+  },
+  {
+    title: "Logistics Heads",
+    members: [
+      {
+        name: "Channabasavanna",
+        role: "",
+        year: "",
+        image: "https://gradient-content-server.vercel.app/content/core26/Channabasavanna.JPG",
+        github: "",
+        linkedin: "https://www.linkedin.com/in/channabasavanna-mb-923aa92b7/",
+      },
+      {
+        name: "Saachi",
+        role: "",
+        year: "",
+        image: "https://gradient-content-server.vercel.app/content/core26/Saachi.JPG",
+        github:"",
+        linkedin:""
+      },
+      {
+        name: "Sneha",
+        role: "",
+        year: "",
+        image: "https://gradient-content-server.vercel.app/content/core26/Sneha.JPG",
+        github:"",
+        linkedin:""
+      },
+    ],
+  },
+  {
+    title: "Multimedia Heads",
+    members: [
+      {
+        name: "Shriyans",
+        role: "",
+        year: "",
+        image: "https://gradient-content-server.vercel.app/content/core26/Shriyans.JPG",
+        github: "https://github.com/MrPhantom2325",
+        linkedin: "https://www.linkedin.com/in/shriyans-nayak-a38a02325",
+      },
+      {
+        name: "Smaya",
+        role: "",
+        year: "",
+        image: "https://gradient-content-server.vercel.app/content/core26/Smaya.JPG",
+        github: "https://github.com/smayamaben-01",
+        linkedin: "https://www.linkedin.com/in/smaya-maben-a99580360",
+      },
+      {
+        name: "Pooja",
+        role: "",
+        year: "",
+        image: "https://gradient-content-server.vercel.app/content/core26/Pooja.JPG",
+        github: "https://github.com/pooja0606",
+        linkedin: "https://www.linkedin.com/in/pooja-b-l-1312a1348",
+      },
+    ],
+  },
+  {
+    title: "Sponsorship & Marketing Heads",
+    members: [
+      {
+        name: "Krish",
+        role: "",
+        year: "",
+        image: "https://gradient-content-server.vercel.app/content/core26/Krish.JPG",
+        github: "https://github.com/Krishparmar10",
+        linkedin:"https://www.linkedin.com/in/krish-n-jain-992066311?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+      },
+      {
+        name: "Suniksha",
+        role: "",
+        year: "",
+        image: "https://gradient-content-server.vercel.app/content/core26/Suniskha.JPG",
+        github:"",
+        linkedin:""
+      },
+    ],
+  },
 ];
 
 export default teamData;

@@ -157,7 +157,7 @@ export default function Home() {
                 {/* Image */}
                 <div className="aspect-w-16 aspect-h-10">
                   <Image
-                    src="https://gradient-content-server.vercel.app/content/group.png"
+                    src="https://gradient-content-server.vercel.app/content/core26/Group.JPG" //GROUP PIC IN HOME
                     alt="Group photo"
                     width={1600}
                     height={1000}
