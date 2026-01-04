@@ -1,3 +1,9 @@
+### **January 2026**
+- 4/1/26
+  - the last changes were made by pranav veeraghanta
+  - edited gradient content server folder, updated some stats
+  - its been a pleasure, goodbye!
+
 ### **October 2025**
 - 30/10/25 (Pranav)
   - removed banner from the home page.
