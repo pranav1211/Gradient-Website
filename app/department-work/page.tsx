@@ -60,17 +60,17 @@ const facilities = [
   {
     name: 'Classrooms',
     description: 'State-of-the-art clasrooms with advanced technology to enhance the student learning experience.',
-    image: 'https://gradient-content-server.vercel.app/content/coe.jpeg'
+    image: 'https://gradient-content-server.vercel.app/content/department/coe.jpeg'
   },
   {
     name: 'Computer Labs',
     description: 'High-performance computing clusters with the high end NVIDIA GPUs.',
-    image: 'https://gradient-content-server.vercel.app/content/lab.webp'
+    image: 'https://gradient-content-server.vercel.app/content/department/lab.webp'
   },
   {
     name: 'Seminar Hall',
     description: 'A spacious seminar hall designed for engaging lectures and discussions, featuring modern seating, clear acoustics, and a professional ambiance.',
-    image: 'https://gradient-content-server.vercel.app/content/semh.jpeg'
+    image: 'https://gradient-content-server.vercel.app/content/department/semh.jpeg'
   }
 ]
 
@@ -432,7 +432,7 @@ export default function DepartmentWork() {
                     style={{ clipPath: 'polygon(0 0, 100% 0, 97% 100%, 3% 100%)' }}
                   >
                     <Image
-                      src="https://gradient-content-server.vercel.app/content/class.jpeg"
+                      src="https://gradient-content-server.vercel.app/content/department/class.jpeg"
                       alt="B.S. Narayan Center of Excellence"
                       loading="lazy"
                       className="object-cover"
