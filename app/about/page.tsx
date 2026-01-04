@@ -227,6 +227,7 @@ export default function About() {
             </motion.section>
 
             {/* Our Roots Section */}
+            {/* Our Roots Section */}
             <motion.section
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
@@ -250,7 +251,7 @@ export default function About() {
                     Gradient was founded in 2022, with the aim of reaching new heights and boldly doing what no one has done before.
                   </p>
 
-                  <div className="grid md:grid-cols-2 gap-8 justify-center">
+                  <div className="grid md:grid-cols-2 gap-8 justify-center mb-8">
                     <motion.div
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -267,7 +268,6 @@ export default function About() {
                       </div>
                       <div className="absolute inset-0 bg-gradient-to-t from-purple-950/80 via-purple-950/0 to-transparent" />
                       <div className="absolute bottom-4 left-0 w-full text-center">
-
                         <p className="text-white text-lg font-medium">Inauguration ceremony of Gradient (2022)</p>
                       </div>
                     </motion.div>
@@ -288,16 +288,18 @@ export default function About() {
                       </div>
                       <div className="absolute inset-0 bg-gradient-to-t from-purple-950/80 via-purple-950/0 to-transparent" />
                       <div className="absolute bottom-4 left-0 w-full text-center">
-
                         <p className="text-white text-lg font-medium">'23 Core, The First Core</p>
                       </div>
                     </motion.div>
+                  </div>
 
+                  {/* 2024 and 2025 Core Teams - Side by Side */}
+                  <div className="grid md:grid-cols-2 gap-8 justify-center">
                     <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.7, delay: 0.7 }}
-                      className="group relative overflow-hidden rounded-lg shadow-lg md:col-span-2 mx-auto max-w-2xl"
+                      className="group relative overflow-hidden rounded-lg shadow-lg"
                       style={{ clipPath: 'polygon(0 0, 100% 0, 97% 100%, 3% 100%)' }}
                     >
                       <div className="h-64 sm:h-72 w-full overflow-hidden">
@@ -309,15 +311,15 @@ export default function About() {
                       </div>
                       <div className="absolute inset-0 bg-gradient-to-t from-purple-950/80 via-purple-950/0 to-transparent" />
                       <div className="absolute bottom-4 left-0 w-full text-center">
-
                         <p className="text-white text-lg font-medium">The 2024 Core Team</p>
                       </div>
                     </motion.div>
+
                     <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.7, delay: 0.8 }}
-                      className="group relative overflow-hidden rounded-lg shadow-lg md:col-span-2 mx-auto max-w-2xl"
+                      className="group relative overflow-hidden rounded-lg shadow-lg"
                       style={{ clipPath: 'polygon(0 0, 100% 0, 97% 100%, 3% 100%)' }}
                     >
                       <div className="h-64 sm:h-72 w-full overflow-hidden">
@@ -333,6 +335,7 @@ export default function About() {
                       </div>
                     </motion.div>
                   </div>
+
                 </div>
               </div>
             </motion.section>
