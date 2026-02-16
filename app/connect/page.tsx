@@ -60,13 +60,24 @@ export default function Connect() {
     }
   };
 
-  const handleMailTo = () => {
-    handleEmailAction('mailto:gradient.mel@bmsce.ac.in');
-  };
+const handleMailTo = () => {
+  const gmailUrl = 'https://mail.google.com/mail/u/0/?to=gradient.mel@bmsce.ac.in&tf=cm';
+  window.open(gmailUrl, '_blank');
+};
 
-  const handleSponsorshipMailTo = () => {
-    handleEmailAction('mailto:gradient.mel@bmsce.ac.in?subject=Sponsorship%20Inquiry%20-%20We%20Want%20to%20Partner%20with%20Gradient&body=Hello%20Gradient%20Team%2C%0A%0AWe%20are%20interested%20in%20exploring%20sponsorship%20opportunities%20with%20your%20organization.%0A%0APlease%20share%20more%20details%20about%20partnership%20options%20and%20how%20we%20can%20collaborate.%0A%0AThank%20you%2C');
-  };
+const handleSponsorshipMailTo = () => {
+  const subject = encodeURIComponent('Sponsorship Inquiry - We Want to Partner with Gradient');
+  const body = encodeURIComponent(
+    'Hello Gradient Team,\n\n' +
+    'We are interested in exploring sponsorship opportunities with your organization.\n\n' +
+    'Please share more details about partnership options and how we can collaborate.\n\n' +
+    'Thank you,'
+  );
+  
+  const gmailUrl = `https://mail.google.com/mail/u/0/?to=gradient.mel@bmsce.ac.in&su=${subject}&body=${body}&tf=cm`;
+  window.open(gmailUrl, '_blank');
+};
+
 
   return (
 
