@@ -19,21 +19,28 @@ Check out the Changelog : [Changelog](https://github.com/pranav1211/Gradient-Web
 
   The event was hosted on this site and has now been setup as a subdomain so that anyone can play.
 
-  The site : [**Uncharted3.GradientAIML.tech**](Uncharted3.gradientaiml.tech)
+  ~~The site : [**Uncharted3.GradientAIML.tech**](Uncharted3.gradientaiml.tech)~~
+  The site : [**Uncharted-3.vercel.app**](Uncharted-3.vercel.app)
 
   Github Repository : [**Github.com/pranav1211/Uncharted3**](Github.com/pranav1211/uncharted3)
 
 ## Archive
 - Gradient Week 2025 page
-  - [**Gradient Week 2025**](https://gradientaiml.tech/gw25)
+  ~~- [**Gradient Week 2025**](https://gradientaiml.tech/gw25)~~
+  - [**Gradient Week 2025**](https://gradient-week.vercel.app)
 - Gradient Week 2025 Recap page
-  - [**Gradient Week 2025 Recap**](https://gradientaiml.tech/gw25recap)
+  ~~- [**Gradient Week 2025 Recap**](https://gradientaiml.tech/gw25recap)~~
+  - [**Gradient Week 2025 Recap**](https://gradient-week-recap-website.vercel.app/events)
 - Gradient X Utsav Ananta 2025 page
-  - [**Gradient X Utsav 2025**](https://gradientaiml.tech/utsav25)
+  ~~- [**Gradient X Utsav 2025**](https://gradientaiml.tech/utsav25)~~
+  - [**Gradient X Utsav 2025**](https://gradient-x-utsav25-special-page.vercel.app)
 - Gradient X Utsav Ananta 2025 Recap page
-  - [**Gradient X Utsav 2025 Recap**](https://gradientaiml.tech/utsav25recap)
+  ~~- [**Gradient X Utsav 2025 Recap**](https://gradientaiml.tech/utsav25recap)~~
+  - [**Gradient X Utsav 2025 Recap**](https://gradient-utsav25-recap-special-page.vercel.app/events)
 - Gradient X PhaseShift Meredian 2025 page
-  - [**Gradient X PhaseShift 2025**](https://gradientaiml.tech/ps25)
+  ~~- [**Gradient X PhaseShift 2025**](https://gradientaiml.tech/ps25)~~
+- The first version of the gradient website
+  - [**Gradient Website First Version**](https://gradient-website-first-version.vercel.app/)
 
 Feel free to explore, use, or contribute to the code in this repository. Contributions are welcome!
 
