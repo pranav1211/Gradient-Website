@@ -8,9 +8,9 @@ To view the old website visit [Gradient Website(Old)](https://gradient-website-l
 
 ## About
 - **Designed and managed by:**
-  - [**Pranav Veeraghanta**](https://beyondmebtw.com), Technical Head at Gradient  
+  - [**Pranav Veeraghanta**](https://beyondmebtw.com), Technical Head at Gradient (2025)
 - **Consultation and Feedback by:**
-- - [**Vinay Yele**](https://vinayyele.live), Design Head at Gradient  
+  - [**Vinay Yele**](https://vinayyele.live), Design Head at Gradient  (2025)
 
 Check out the Changelog : [Changelog](https://github.com/pranav1211/Gradient-Website/blob/main/Changelog.md)
 
