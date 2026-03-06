@@ -2,7 +2,7 @@
 
 This repository contains the source code and assets for **The Gradient Club** Website. We are a student club focused on fostering learning and innovation in Artificial Intelligence and Machine Learning.
 
-Visit our website: [GradientAIML.tech](https://GradientAIML.tech) \
+~~Visit our website: [GradientAIML.tech](https://GradientAIML.tech)~~ \
 The above link has been depracted and is no longer in use. This is because Gradient is under new management, view the new website at : [GradientClub.com](https://gradientclub.com) \
 To view the old website visit [Gradient Website(Old)](https://gradient-website-liart.vercel.app)
 
