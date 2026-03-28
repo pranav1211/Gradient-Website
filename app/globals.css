@@ -14,6 +14,15 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Hide scrollbar — all browsers */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE / Edge */
+}
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
 * {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
