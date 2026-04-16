@@ -156,7 +156,7 @@ export const eventCategories = [
                         status: "completed",
                         poster: "https://gradient-content-server.vercel.app/content/ps25/f404poster.png",
                         images: [
-                            "fffs.png",                            
+                            "fffs.png",
                             "https://gradient-content-server.vercel.app/content/ps25/1.webp",
                             "https://gradient-content-server.vercel.app/content/ps25/3.webp",
                             "https://gradient-content-server.vercel.app/content/ps25/4.webp"
@@ -439,30 +439,43 @@ export const specialShowcases = [
         title: "Gradient Week 2025",
         description: "Explore the official page for Gradient Week 2025, our flagship annual Tech Innovation Week featuring hackathons, workshops, and tech showcases.",
         image: "https://gradient-content-server.vercel.app/content/gallery/special/3.webp",
-        link: "https://gradientaiml.tech/gw25"
+        link: "https://gradient-week.vercel.app/"
     },
     {
         title: "Gradient Week 2025 Recap",
         description: "Relive the highlights and memorable moments from Gradient Week 2025 through our comprehensive event recap.",
         image: "https://gradient-content-server.vercel.app/content/gallery/special/4.webp",
-        link: "https://gradientaiml.tech/gw25recap"
+        link: "https://gradient-week-recap-website.vercel.app/events"
     },
     {
         title: "Gradient X Utsav 2025",
         description: "Discover our exciting collaboration with Utsav Ananta 2025, BMSCE's annual cultural festival, featuring unique events and showcases.",
         image: "https://gradient-content-server.vercel.app/content/gallery/special/5.webp",
-        link: "https://gradientaiml.tech/utsav25"
+        link: "https://gradient-x-utsav25-special-page.vercel.app/"
     },
     {
         title: "Gradient X Utsav 2025 Recap",
         description: "Browse through the unforgettable moments and achievements from our partnership with Utsav Ananta 2025.",
         image: "https://gradient-content-server.vercel.app/content/gallery/special/6.webp",
-        link: "https://gradientaiml.tech/utsav25recap"
+        link: "https://gradient-utsav25-recap-special-page.vercel.app/events"
     },
     {
         title: "Gradient X PhaseShift 2025",
         description: "Visit our dedicated page for PhaseShift Meridian 2025, BMSCE's premier technical symposium, showcasing our innovative events and workshops.",
         image: "https://gradient-content-server.vercel.app/content/gallery/special/7.webp",
-        link: "https://gradientaiml.tech/ps25"
-    }
+        link: "https://gradient-ps25-special-page.vercel.app/"
+    },
+    {
+        title: "Gradient Club first website",
+        description: "A nostalgic look back at the original website of the Gradient Club, showcasing our humble beginnings",
+        image: "/content/gradientold.png",
+        link: "https://gradient-website-first-version.vercel.app/"
+    },
+    {
+        title: "Gradient AIML Open House 2026",
+        description: "A special page created for the BMSCE Open House 2026 for the department of artificial intelligence and machine learning.",
+        image: "/content/aiml2026.png",
+        link: "https://gradient-aiml-open-house-2026.vercel.app/"
+    },
+    
 ];

@@ -632,9 +632,14 @@ export default function Events() {
 
         <div className="flex items-center justify-center mb-12">
           <div className="w-16 h-1 bg-purple-500" />
-          <h2 className="text-3xl md:text-4xl righteous-regular px-6 text-center text-white">
-            Special Showcases
-          </h2>
+          <div className="px-6 text-center">
+            <h2 className="text-3xl md:text-4xl righteous-regular text-white">
+              Special Showcases
+            </h2>
+            <p className="mt-3 text-sm uppercase tracking-[0.24em] text-purple-200/80">
+              Designed and created by pranav veeraghanta
+            </p>
+          </div>
           <div className="w-16 h-1 bg-purple-500" />
         </div>
 

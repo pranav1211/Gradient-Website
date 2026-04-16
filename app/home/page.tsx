@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import Navbar from '../../components/Navbar'
 import { motion } from 'framer-motion'
-import { ArrowRight, ChevronDown, Calendar, Sparkles, ArrowUpRight, Compass, Trophy, Play, Cpu, Activity, Zap } from 'lucide-react'
+import { ArrowRight, ChevronDown, Calendar, Sparkles, ArrowUpRight, Compass, Trophy, Play } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
@@ -52,45 +52,25 @@ export default function Home() {
 
         <Navbar />
 
-        {/* Gradient X PS 2025 Banner */}
         <motion.div
-          className="relative w-full bg-gradient-to-r from-purple-900 via-indigo-800 to-blue-800 py-6 mt-20 sm:mt-20 md:mt-24 mb-8 md:mb-12"
+          className="relative mt-24 sm:mt-24 md:mt-28 mb-8 w-full"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, type: 'spring', stiffness: 100 }}
+          transition={{ duration: 0.7 }}
         >
-          <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between w-full space-y-6 lg:space-y-0 lg:space-x-8">
-              {/* Event Name */}
-              <div className="flex items-center justify-center lg:justify-start space-x-3 text-center lg:text-left">
-                <Zap size={30} className="text-amber-300 animate-pulse" />
-                <h2 className="font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white">
-                  <span className="text-amber-300">Gradient X</span> PhaseShift 2025
-                </h2>
-              </div>
-
-              {/* Date */}
-              <div className="flex items-center justify-center space-x-3 text-center">
-                <Cpu size={28} className="text-amber-300 hidden sm:block animate-bounce" />
-                <p className="text-2xl sm:text-3xl lg:text-3xl text-white font-bold tracking-wide">
-                  19-20 September 2025
-                </p>
-                <Activity size={28} className="text-amber-300 hidden sm:block animate-bounce" />
-              </div>
-
-              {/* Call to Action */}
-              <div className="flex flex-col items-center text-center lg:items-end lg:text-right space-y-3">
-                <p className="text-lg lg:text-xl text-amber-200 font-medium">
-                  Workshops and Events!
-                </p>
-                <Link
-                  href="/events"
-                  className="group inline-flex items-center justify-center space-x-2 px-5 py-2 bg-amber-300 hover:bg-amber-200 rounded-lg transition-all duration-300 transform hover:scale-105 text-purple-900 font-bold text-base lg:text-lg shadow-lg"
-                >
-                  <span>Explore Now</span>
-                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
-              </div>
+          <div className="w-full border-y border-amber-300/30 bg-gradient-to-r from-amber-500/15 via-orange-400/10 to-purple-500/15 shadow-xl backdrop-blur-sm">
+            <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 py-5 text-center sm:px-8 lg:flex-row lg:px-12 lg:text-left">
+              <p className="text-base leading-relaxed text-amber-50 md:text-lg">
+                This website belonged to the core of 2025, this website is archived. Check out the new website: GradientClub.com.
+              </p>
+              <Link
+                href="https://gradientclub.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full bg-amber-300 px-6 py-3 text-base font-semibold text-purple-950 transition-all duration-300 hover:scale-105 hover:bg-amber-200"
+              >
+                Visit GradientClub.com
+              </Link>
             </div>
           </div>
         </motion.div>
@@ -157,7 +137,7 @@ export default function Home() {
                 {/* Image */}
                 <div className="aspect-w-16 aspect-h-10">
                   <Image
-                    src="https://gradient-content-server.vercel.app/content/core26/Group.JPG" //GROUP PIC IN HOME
+                    src="https://gradient-content-server.vercel.app/content/group.png" //GROUP PIC IN HOME
                     alt="Group photo"
                     width={1600}
                     height={1000}

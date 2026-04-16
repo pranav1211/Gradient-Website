@@ -150,23 +150,16 @@ const Footer = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="border-t border-purple-500/10 mt-12 pt-8 text-center text-gray-400"
         >
-          <p>&copy; {new Date().getFullYear()} Gradient BMSCE. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Gradient BMSCE & Pranav Veeraghanta, All rights reserved.</p>
           <p className="mt-2">
             Designed, Built and Managed by{" "}
             <Link
               href="https://beyondmebtw.com/"
-              target="_blank"
+              target="_blank" 
               className="text-purple-400 hover:underline"
             >
               Pranav Veeraghanta
-            </Link> (Tech Head). Feedback and Consultation by
-            <Link
-              href="https://vinayyele.live"
-              target="_blank"
-              className="text-purple-400 hover:underline"
-            >
-              &nbsp;Vinay Yele
-            </Link> (Design Head) at Gradient
+            </Link> (Tech Head 2025)
           </p>
           {/* Source Code Link */}
           <p className="mt-2">

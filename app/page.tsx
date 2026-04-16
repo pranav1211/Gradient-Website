@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import { motion } from 'framer-motion'
-import { ArrowRight, ChevronDown, Calendar, Sparkles, ArrowUpRight, Compass, Trophy, Play, Cpu, Activity, Zap } from 'lucide-react'
+import { ArrowRight, ChevronDown, Calendar, Sparkles, ArrowUpRight, Compass, Trophy, Play } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
@@ -52,9 +52,31 @@ export default function Home() {
 
         <Navbar />
 
+        <motion.div
+          className="relative mt-24 sm:mt-24 md:mt-28 mb-8 w-full"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
+          <div className="w-full border-y border-amber-300/30 bg-gradient-to-r from-amber-500/15 via-orange-400/10 to-purple-500/15 shadow-xl backdrop-blur-sm">
+            <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 py-5 text-center sm:px-8 lg:flex-row lg:px-12 lg:text-left">
+              <p className="text-base leading-relaxed text-amber-50 md:text-lg">
+                This website belonged to the core of 2025, this website is archived. Check out the new website: GradientClub.com.
+              </p>
+              <Link
+                href="https://gradientclub.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full bg-amber-300 px-6 py-3 text-base font-semibold text-purple-950 transition-all duration-300 hover:scale-105 hover:bg-amber-200"
+              >
+                Visit GradientClub.com ↗
+              </Link>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Main content container with improved padding */}
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 mt-26 sm:mt-26 md:mt-26">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
           {/* Hero section with better height and spacing */}
           <div className="flex flex-col lg:flex-row items-center justify-between min-h-[65vh] gap-8 lg:gap-12">
 
@@ -114,7 +136,7 @@ export default function Home() {
                 {/* Image */}
                 <div className="aspect-w-16 aspect-h-10">
                   <Image
-                    src="https://gradient-content-server.vercel.app/content/core26/Group.JPG" //GROUP PIC IN HOME
+                    src="/content/group.png" //GROUP PIC IN HOME
                     alt="Group photo"
                     width={1600}
                     height={1000}
